@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 
 const stats = [
@@ -84,16 +84,16 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <span class="section-label">Utah Valley's #1 Asphalt Contractor</span>
+      <span class="section-label hero-label">Utah Valley's #1 Asphalt Contractor</span>
       <h1>Your Driveway.<br />Done in a Day.</h1>
       <p class="hero-sub">We show up with a full crew, professional equipment, and everything needed to complete your project from sunup to sundown. Serving Spanish Fork to Salt Lake City.</p>
       <div class="hero-ctas">
         <a href="/contact" class="btn-primary">Get a Free Quote</a>
-        <a href="/work" class="btn-outline">See Our Work</a>
+        <a href="/work" class="hero-outline-btn">See Our Work</a>
       </div>
     </div>
     <div class="hero-scroll-hint">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="#cd553f" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="#CD5535" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
   </section>
 
@@ -110,7 +110,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   </section>
 
   <!-- SERVICES -->
-  <section class="section-pad section-dark">
+  <section class="section-pad section-white">
     <div class="container">
       <div class="section-header">
         <span class="section-label">What We Do</span>
@@ -155,7 +155,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
             {differentiators.map(d => (
               <div class="diff-item">
                 <div class="diff-icon">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#cd553f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#CD5535" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
                 <div>
                   <strong>{d.title}</strong>
@@ -164,14 +164,14 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
               </div>
             ))}
           </div>
-          <a href="/about" class="btn-outline-red" style="margin-top: 2rem; display: inline-block;">Meet the Team &rarr;</a>
+          <a href="/about" class="btn-outline-accent" style="margin-top: 2rem; display: inline-block;">Meet the Team &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="section-pad section-dark">
+  <section class="section-pad section-white">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Our Work</span>
@@ -206,7 +206,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
         ))}
       </div>
       <div class="projects-cta">
-        <a href="/work" class="btn-outline-red">View All Projects &rarr;</a>
+        <a href="/work" class="btn-outline-accent">View All Projects &rarr;</a>
       </div>
     </div>
   </section>
@@ -224,7 +224,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
         <div class="areas-grid">
           {areas.map(city => (
             <div class="area-pill">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#cd553f" opacity="0.3"/><circle cx="6" cy="6" r="3" fill="#cd553f"/></svg>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#CD5535" opacity="0.25"/><circle cx="6" cy="6" r="3" fill="#CD5535"/></svg>
               {city}
             </div>
           ))}
@@ -234,7 +234,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section-pad section-dark">
+  <section class="section-pad section-white">
     <div class="container">
       <div class="section-header">
         <span class="section-label">What Clients Say</span>
@@ -257,19 +257,34 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   <!-- BOTTOM CTA -->
   <section class="bottom-cta">
     <div class="container">
-      <span class="section-label">Start Today</span>
+      <span class="section-label cta-label">Start Today</span>
       <h2>Ready for a New Driveway?</h2>
       <p>Get a free, no-obligation quote and find out why homeowners across Utah Valley trust J&amp;C Asphalt to get the job done right — the first time.</p>
       <div class="bottom-cta-buttons">
-        <a href="/contact" class="btn-primary">Get a Free Quote</a>
-        <a href="tel:+14354064640" class="btn-outline">Call (435) 406-4640</a>
+        <a href="/contact" class="cta-btn-dark">Get a Free Quote</a>
+        <a href="tel:+14354064640" class="cta-btn-outline">Call (435) 406-4640</a>
       </div>
     </div>
   </section>
 </Layout>
 
+<style is:global>
+  /* Light theme: override global CSS tokens for Homepage 1 */
+  :root {
+    --color-jc-black: #DDE0DE;
+    --color-jc-dark:  #FFFFFF;
+    --color-jc-mid:   #F2F5F2;
+    --color-jc-card:  #FFFFFF;
+    --color-jc-white: #121212;
+    --color-jc-muted: #666666;
+    --color-jc-border:#C8CEC8;
+    --color-jc-red:   #CD5535;
+    --color-jc-red-dark: #a83d25;
+  }
+</style>
+
 <style>
-  /* HERO */
+  /* HERO — stays dark/photo */
   .hero {
     position: relative;
     min-height: 100vh;
@@ -293,7 +308,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
       to right,
       rgba(0,0,0,0.92) 0%,
       rgba(0,0,0,0.75) 50%,
-      rgba(0,0,0,0.4) 100%
+      rgba(0,0,0,0.35) 100%
     );
   }
 
@@ -303,6 +318,11 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     padding-top: 7rem;
     padding-bottom: 4rem;
     max-width: 700px;
+  }
+
+  /* Hero label stays light on dark bg */
+  .hero-label {
+    color: #CD5535 !important;
   }
 
   .hero-content h1 {
@@ -317,7 +337,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .hero-sub {
     font-size: clamp(1rem, 2vw, 1.15rem);
-    color: #B0B0B0;
+    color: #C0C0C0;
     line-height: 1.7;
     max-width: 540px;
     margin-bottom: 2rem;
@@ -327,6 +347,26 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+
+  /* Hero outline button stays light against dark photo */
+  .hero-outline-btn {
+    display: inline-block;
+    border: 2px solid rgba(240, 240, 240, 0.75);
+    color: #F0F0F0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .hero-outline-btn:hover {
+    background-color: rgba(240, 240, 240, 0.15);
+    border-color: #F0F0F0;
   }
 
   .hero-scroll-hint {
@@ -343,9 +383,9 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     50% { transform: translateX(-50%) translateY(8px); }
   }
 
-  /* STATS */
+  /* STATS BAR */
   .stats-bar {
-    background-color: #cd553f;
+    background-color: #CD5535;
     padding: 2.5rem 0;
   }
 
@@ -366,7 +406,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: #000;
+    color: #fff;
     line-height: 1;
   }
 
@@ -376,7 +416,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #1A1A1A;
+    color: rgba(255,255,255,0.75);
   }
 
   /* SECTION LAYOUT */
@@ -384,8 +424,8 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     padding: 5rem 0;
   }
 
-  .section-dark {
-    background-color: #111111;
+  .section-white {
+    background-color: #FFFFFF;
   }
 
   .section-header {
@@ -395,7 +435,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .section-sub {
-    color: #888;
+    color: #666666;
     font-size: 1rem;
     line-height: 1.7;
     margin-top: 0.75rem;
@@ -409,22 +449,23 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .service-card {
-    background-color: #1A1A1A;
-    border: 1px solid #2A2A2A;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
     padding: 2rem;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
     display: block;
   }
 
   .service-card:hover {
-    border-color: #cd553f;
+    border-color: #CD5535;
     transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   }
 
   .service-icon {
     font-size: 1.75rem;
-    color: #cd553f;
+    color: #CD5535;
     margin-bottom: 1rem;
   }
 
@@ -433,13 +474,13 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #F0F0F0;
+    color: #121212;
     margin-bottom: 0.75rem;
   }
 
   .service-card p {
     font-size: 0.9rem;
-    color: #888;
+    color: #555555;
     line-height: 1.6;
     margin-bottom: 1.25rem;
   }
@@ -449,12 +490,12 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #cd553f;
+    color: #CD5535;
   }
 
   /* WHY J&C */
   .why-section {
-    background-color: #0A0A0A;
+    background-color: #DDE0DE;
   }
 
   .why-inner {
@@ -480,7 +521,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     position: absolute;
     bottom: -1.5rem;
     right: -1.5rem;
-    background-color: #cd553f;
+    background-color: #CD5535;
     padding: 1.5rem;
     text-align: center;
   }
@@ -490,7 +531,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #000;
+    color: #fff;
     line-height: 1;
   }
 
@@ -501,12 +542,12 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #000;
+    color: rgba(255,255,255,0.85);
     margin-top: 0.25rem;
   }
 
   .why-intro {
-    color: #888;
+    color: #555555;
     font-size: 1rem;
     line-height: 1.7;
     margin: 1rem 0 2rem;
@@ -528,8 +569,8 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     flex-shrink: 0;
     width: 32px;
     height: 32px;
-    background-color: rgba(205, 85, 63, 0.1);
-    border: 1px solid rgba(205, 85, 63, 0.3);
+    background-color: rgba(205, 85, 53, 0.1);
+    border: 1px solid rgba(205, 85, 53, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,7 +582,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #F0F0F0;
+    color: #121212;
     letter-spacing: 0.05em;
     display: block;
     margin-bottom: 0.25rem;
@@ -549,9 +590,29 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .diff-item p {
     font-size: 0.875rem;
-    color: #888;
+    color: #555555;
     line-height: 1.6;
     margin: 0;
+  }
+
+  /* Accent outline button for light backgrounds */
+  .btn-outline-accent {
+    display: inline-block;
+    border: 2px solid #CD5535;
+    color: #CD5535;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-outline-accent:hover {
+    background-color: #CD5535;
+    color: #fff;
   }
 
   /* PROJECTS */
@@ -563,13 +624,14 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .project-card {
     overflow: hidden;
-    background-color: #1A1A1A;
-    border: 1px solid #2A2A2A;
-    transition: border-color 0.2s;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
 
   .project-card:hover {
-    border-color: #cd553f;
+    border-color: #CD5535;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   }
 
   .project-img {
@@ -593,8 +655,8 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     position: absolute;
     top: 0.75rem;
     left: 0.75rem;
-    background-color: #cd553f;
-    color: #000;
+    background-color: #CD5535;
+    color: #fff;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.7rem;
     font-weight: 600;
@@ -615,13 +677,13 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #F0F0F0;
+    color: #121212;
     letter-spacing: 0.03em;
   }
 
   .project-info span {
     font-size: 0.8rem;
-    color: #888;
+    color: #666666;
   }
 
   .projects-cta {
@@ -631,7 +693,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   /* SERVICE AREAS */
   .areas-section {
-    background-color: #0A0A0A;
+    background-color: #DDE0DE;
   }
 
   .areas-inner {
@@ -646,7 +708,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .areas-content p {
-    color: #888;
+    color: #555555;
     font-size: 1rem;
     line-height: 1.7;
   }
@@ -661,14 +723,14 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #1A1A1A;
-    border: 1px solid #2A2A2A;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
     padding: 0.5rem 1rem;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: #B0B0B0;
+    color: #444444;
     text-transform: uppercase;
   }
 
@@ -680,14 +742,14 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .testimonial-card {
-    background-color: #1A1A1A;
-    border: 1px solid #2A2A2A;
+    background-color: #F7F9F7;
+    border: 1px solid #C8CEC8;
     padding: 2rem;
-    border-top: 3px solid #cd553f;
+    border-top: 3px solid #CD5535;
   }
 
   .stars {
-    color: #cd553f;
+    color: #CD5535;
     font-size: 1rem;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
@@ -695,7 +757,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .testimonial-card p {
     font-size: 0.9rem;
-    color: #B0B0B0;
+    color: #444444;
     line-height: 1.7;
     font-style: italic;
     margin-bottom: 1.25rem;
@@ -707,18 +769,18 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #F0F0F0;
+    color: #121212;
   }
 
   /* BOTTOM CTA */
   .bottom-cta {
-    background-color: #cd553f;
+    background-color: #121212;
     padding: 5rem 0;
     text-align: center;
   }
 
-  .bottom-cta .section-label {
-    color: rgba(0,0,0,0.6);
+  .cta-label {
+    color: #CD5535 !important;
   }
 
   .bottom-cta h2 {
@@ -726,13 +788,13 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
     text-transform: uppercase;
-    color: #000;
+    color: #F0F0F0;
     margin: 0.25rem 0 1rem;
   }
 
   .bottom-cta p {
     font-size: 1.05rem;
-    color: rgba(0,0,0,0.7);
+    color: #999999;
     max-width: 540px;
     margin: 0 auto 2rem;
     line-height: 1.6;
@@ -745,23 +807,41 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     flex-wrap: wrap;
   }
 
-  .bottom-cta .btn-primary {
-    background-color: #000;
-    color: #cd553f;
+  .cta-btn-dark {
+    display: inline-block;
+    background-color: #CD5535;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
   }
 
-  .bottom-cta .btn-primary:hover {
-    background-color: #1A1A1A;
+  .cta-btn-dark:hover {
+    background-color: #a83d25;
   }
 
-  .bottom-cta .btn-outline {
-    border-color: #000;
-    color: #000;
+  .cta-btn-outline {
+    display: inline-block;
+    border: 2px solid rgba(240,240,240,0.4);
+    color: #F0F0F0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
   }
 
-  .bottom-cta .btn-outline:hover {
-    background-color: #000;
-    color: #cd553f;
+  .cta-btn-outline:hover {
+    border-color: #F0F0F0;
+    background-color: rgba(240,240,240,0.08);
   }
 
   /* RESPONSIVE */
