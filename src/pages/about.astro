@@ -1,0 +1,366 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const values = [
+  { title: 'Trustworthy', desc: 'We show up when we say we will, do what we said we\'d do, and charge what we quoted.' },
+  { title: 'Quality', desc: 'We use premium materials and proven techniques on every job, regardless of size.' },
+  { title: 'Professional', desc: 'Our crew is trained, equipped, and held to a high standard on every project.' },
+  { title: 'Community', desc: 'We\'re your neighbors. We take pride in improving the driveways and lots of the community we live in.' },
+];
+---
+
+<Layout
+  title="About J&C Asphalt | Utah Valley's Asphalt Paving Team"
+  description="Meet the team behind J&C Asphalt — a professional crew of 15+ trained asphalt specialists serving Utah Valley from Spanish Fork to Salt Lake City."
+>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Who We Are</span>
+      <h1 class="section-title">Utah Valley's Professional Asphalt Team</h1>
+      <p>Founded right here in Utah Valley, J&amp;C Asphalt has grown from a small local operation into a full-scale professional paving crew — without losing the community-first values that built us.</p>
+    </div>
+  </section>
+
+  <!-- FOUNDER STORY -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="story-inner">
+        <div class="story-image">
+          <img
+            src="https://placehold.co/560x640/1A1A1A/F5B800?text=Andrew+Jeffery"
+            alt="Andrew Jeffery, founder of J&C Asphalt"
+            width="560"
+            height="640"
+            loading="lazy"
+          />
+        </div>
+        <div class="story-content">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Built From the Ground Up</h2>
+          <p>J&amp;C Asphalt was founded by Andrew Jeffery, a Utah native with a lifelong passion for heavy equipment and a family history in construction and farming. Growing up around machinery and hard work, Andrew knew early on that he wanted to build something of his own.</p>
+          <p>What started as a small paving operation has grown into a team of 15+ trained professionals equipped to handle residential driveways, commercial parking lots, and everything in between — often completing jobs in a single day that would take smaller crews a week.</p>
+          <p>We're proud to serve the communities we grew up in, and we approach every project with the same commitment we'd bring to our own homes.</p>
+          <div class="story-stats">
+            <div class="story-stat">
+              <span class="stat-n">15+</span>
+              <span class="stat-l">Crew Members</span>
+            </div>
+            <div class="story-stat">
+              <span class="stat-n">500+</span>
+              <span class="stat-l">Projects Done</span>
+            </div>
+            <div class="story-stat">
+              <span class="stat-n">10+</span>
+              <span class="stat-l">Years Serving Utah Valley</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM / CREW SECTION -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Crew</span>
+        <h2 class="section-title">15+ Trained Professionals</h2>
+        <p class="section-sub">Every member of our crew is trained, certified, and experienced. We don't hire day labor or cut corners on personnel. When we show up to your job, you get professionals.</p>
+      </div>
+      <div class="crew-image-block">
+        <img
+          src="https://placehold.co/1140x500/1A1A1A/F5B800?text=Full+Crew+Photo"
+          alt="The full J&C Asphalt crew ready for work"
+          width="1140"
+          height="500"
+          loading="lazy"
+        />
+      </div>
+      <div class="crew-callouts">
+        <div class="callout">
+          <div class="callout-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#F5B800" stroke-width="2"/><path d="M14 8v6l4 3" stroke="#F5B800" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Same-Day Completion</h3>
+          <p>With a full team on every job, we complete most driveways and parking lots in a single workday.</p>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="6" width="24" height="16" rx="2" stroke="#F5B800" stroke-width="2"/><path d="M2 11h24" stroke="#F5B800" stroke-width="2"/></svg>
+          </div>
+          <h3>Professional Equipment</h3>
+          <p>We own and operate our own fleet of paving machinery — no rented equipment, no delays waiting on third parties.</p>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L3 8v7c0 5.5 4.7 10.6 11 12 6.3-1.4 11-6.5 11-12V8L14 3z" stroke="#F5B800" stroke-width="2"/><path d="M9 14l3 3 6-6" stroke="#F5B800" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Fully Insured</h3>
+          <p>J&amp;C Asphalt is fully insured on every project. You're protected, and so is your property.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Stand For</span>
+        <h2 class="section-title">Our Values</h2>
+      </div>
+      <div class="values-grid">
+        {values.map((v, i) => (
+          <div class="value-card">
+            <span class="value-number">0{i + 1}</span>
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="container">
+      <h2>Ready to Work With Us?</h2>
+      <p>Get a free quote and see why Utah Valley homeowners trust J&amp;C Asphalt.</p>
+      <a href="/contact" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 8rem 0 5rem;
+    background-color: #111111;
+    border-bottom: 3px solid #F5B800;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0.5rem 0 1rem;
+  }
+
+  .page-hero p {
+    color: #888;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  .section-pad {
+    padding: 5rem 0;
+  }
+
+  .section-dark {
+    background-color: #111111;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-sub {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+
+  .story-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .story-content h2 {
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .story-content p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  .story-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2A2A2A;
+    flex-wrap: wrap;
+  }
+
+  .story-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-n {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F5B800;
+    line-height: 1;
+  }
+
+  .stat-l {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .crew-image-block {
+    margin-bottom: 3rem;
+  }
+
+  .crew-image-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .crew-callouts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .callout {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+  }
+
+  .callout-icon {
+    margin: 0 auto 1.25rem;
+    width: 56px;
+    height: 56px;
+    background-color: rgba(245, 184, 0, 0.1);
+    border: 1px solid rgba(245, 184, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .callout h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .callout p {
+    font-size: 0.875rem;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 2rem;
+    background-color: #111111;
+    border: 1px solid #2A2A2A;
+    border-top: 3px solid #F5B800;
+  }
+
+  .value-number {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgba(245, 184, 0, 0.2);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .value-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  .value-card p {
+    font-size: 0.875rem;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  .about-cta {
+    background-color: #F5B800;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .about-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-cta p {
+    color: rgba(0,0,0,0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-cta .btn-primary {
+    background-color: #000;
+    color: #F5B800;
+  }
+
+  .about-cta .btn-primary:hover {
+    background-color: #1A1A1A;
+  }
+
+  @media (max-width: 900px) {
+    .story-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .crew-callouts,
+    .values-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .crew-callouts,
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,392 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const utahValleyCities = [
+  { name: 'Provo', desc: 'Our home base. We serve all of Provo and surrounding neighborhoods.' },
+  { name: 'Orem', desc: 'Full paving and driveway services throughout Orem.' },
+  { name: 'Spanish Fork', desc: 'Serving residential and commercial clients in Spanish Fork.' },
+  { name: 'Springville', desc: 'Driveway and parking lot paving across Springville.' },
+  { name: 'Payson', desc: 'Asphalt and concrete services in Payson and nearby areas.' },
+  { name: 'Lehi', desc: 'Growing fast — we serve all of Lehi\'s new and established neighborhoods.' },
+  { name: 'American Fork', desc: 'Residential and commercial paving throughout American Fork.' },
+  { name: 'Pleasant Grove', desc: 'Serving Pleasant Grove homeowners and businesses.' },
+  { name: 'Lindon', desc: 'Full paving services in Lindon.' },
+  { name: 'Mapleton', desc: 'Residential driveways and estate work in Mapleton.' },
+  { name: 'Salem', desc: 'Paving services for Salem homes and properties.' },
+  { name: 'Santaquin', desc: 'Serving Santaquin as we expand southward.' },
+  { name: 'Vineyard', desc: 'Covering the rapidly growing Vineyard community.' },
+  { name: 'Eagle Mountain', desc: 'Driveway and parking lot paving across Eagle Mountain.' },
+];
+
+const slcCities = [
+  'Salt Lake City', 'Murray', 'Sandy', 'Draper', 'Herriman', 'Riverton', 'South Jordan',
+];
+---
+
+<Layout
+  title="Service Areas | J&C Asphalt — Spanish Fork to Salt Lake"
+  description="J&C Asphalt serves the full Utah Valley corridor from Santaquin and Spanish Fork to Lehi and Salt Lake City. Get a free quote today."
+>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Where We Work</span>
+      <h1 class="section-title">Spanish Fork to Salt Lake City</h1>
+      <p>We serve the entire Utah Valley corridor and are actively expanding into the Salt Lake Valley. If you're nearby and not on the list, call us — we likely cover your area.</p>
+    </div>
+  </section>
+
+  <!-- MAP PLACEHOLDER + OVERVIEW -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="area-overview">
+        <div class="area-map">
+          <img
+            src="https://placehold.co/640x520/1A1A1A/F5B800?text=Service+Area+Map"
+            alt="J&C Asphalt service area map — Utah Valley and Salt Lake Valley"
+            width="640"
+            height="520"
+            loading="lazy"
+          />
+        </div>
+        <div class="area-overview-text">
+          <span class="section-label">Our Coverage</span>
+          <h2 class="section-title">All of Utah Valley. Growing into Salt Lake.</h2>
+          <p>We currently operate throughout Utah County — every city from Santaquin in the south to Lehi in the north. We're expanding our coverage into Salt Lake Valley now and can serve select Salt Lake area projects today.</p>
+          <p>With a full crew and our own equipment fleet, we can mobilize to any job in our coverage area — typically with shorter lead times than smaller contractors.</p>
+          <div class="coverage-stats">
+            <div class="cov-stat">
+              <span class="cov-number">14+</span>
+              <span class="cov-label">Cities Served</span>
+            </div>
+            <div class="cov-stat">
+              <span class="cov-number">2</span>
+              <span class="cov-label">Valleys Covered</span>
+            </div>
+            <div class="cov-stat">
+              <span class="cov-number">70mi</span>
+              <span class="cov-label">Corridor Length</span>
+            </div>
+          </div>
+          <a href="/contact" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Check Your Area</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UTAH VALLEY CITIES -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Primary Service Area</span>
+        <h2 class="section-title">Utah Valley</h2>
+        <p class="section-sub">Our home market. We know every neighborhood and can typically schedule projects with faster turnaround times here.</p>
+      </div>
+      <div class="cities-grid">
+        {utahValleyCities.map(city => (
+          <div class="city-card">
+            <div class="city-dot"></div>
+            <div>
+              <strong>{city.name}, UT</strong>
+              <p>{city.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SLC EXPANSION -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="slc-inner">
+        <div>
+          <span class="section-label">Expanding Now</span>
+          <h2 class="section-title">Salt Lake Valley</h2>
+          <p>We're currently accepting select projects in the Salt Lake Valley as we grow our presence there. If you're in any of the following cities, reach out and we'll let you know if we can fit your project in.</p>
+          <div class="slc-cities">
+            {slcCities.map(city => (
+              <div class="slc-pill">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#F5B800" opacity="0.5"/><circle cx="4" cy="4" r="1.5" fill="#F5B800"/></svg>
+                {city}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="slc-cta">
+          <div class="slc-cta-card">
+            <h3>Not Sure If We Cover Your Area?</h3>
+            <p>Give us a call or send us a message. If we can get to you, we will.</p>
+            <a href="tel:+14354064640" class="btn-primary">(435) 406-4640</a>
+            <a href="/contact" class="btn-outline-yellow">Send a Message</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="areas-bottom-cta">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Request a free quote and our team will reach out within 24 hours to discuss your project.</p>
+      <a href="/contact" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 8rem 0 5rem;
+    background-color: #111111;
+    border-bottom: 3px solid #F5B800;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0.5rem 0 1rem;
+  }
+
+  .page-hero p {
+    color: #888;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  .section-pad {
+    padding: 5rem 0;
+  }
+
+  .section-dark {
+    background-color: #111111;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-sub {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+
+  .area-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .area-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .area-overview-text h2 {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .area-overview-text p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  .coverage-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2A2A2A;
+  }
+
+  .cov-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .cov-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F5B800;
+    line-height: 1;
+  }
+
+  .cov-label {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .cities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .city-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem;
+    background-color: #111111;
+    border: 1px solid #2A2A2A;
+    transition: border-color 0.2s;
+  }
+
+  .city-card:hover {
+    border-color: #F5B800;
+  }
+
+  .city-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #F5B800;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+  }
+
+  .city-card strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #F0F0F0;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  .city-card p {
+    font-size: 0.825rem;
+    color: #888;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .slc-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .slc-inner h2 {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .slc-inner > div > p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .slc-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+
+  .slc-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    padding: 0.4rem 0.875rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: #B0B0B0;
+    text-transform: uppercase;
+  }
+
+  .slc-cta-card {
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-top: 3px solid #F5B800;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .slc-cta-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    margin-bottom: 0.25rem;
+  }
+
+  .slc-cta-card p {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .areas-bottom-cta {
+    background-color: #F5B800;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .areas-bottom-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.75rem;
+  }
+
+  .areas-bottom-cta p {
+    color: rgba(0,0,0,0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .areas-bottom-cta .btn-primary {
+    background-color: #000;
+    color: #F5B800;
+  }
+
+  .areas-bottom-cta .btn-primary:hover {
+    background-color: #1A1A1A;
+  }
+
+  @media (max-width: 900px) {
+    .area-overview,
+    .slc-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .cities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .cities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

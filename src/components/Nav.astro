@@ -1,0 +1,331 @@
+---
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Our Work', href: '/work' },
+  { label: 'Service Areas', href: '/service-areas' },
+];
+
+const services = [
+  { label: 'Asphalt Paving', href: '/services/asphalt-paving' },
+  { label: 'Residential Driveways', href: '/services/driveways' },
+  { label: 'Parking Lots', href: '/services/parking-lots' },
+  { label: 'Concrete Work', href: '/services/concrete' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header id="site-header">
+  <div class="header-top">
+    <div class="container">
+      <span>Mon–Fri &nbsp;|&nbsp; 9AM – 6PM</span>
+      <span><a href="tel:+14354064640">(435) 406-4640</a> &nbsp;|&nbsp; <a href="mailto:jcasphalt.contracting@gmail.com">jcasphalt.contracting@gmail.com</a></span>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-jc">J&amp;C</span>
+        <span class="logo-asphalt">ASPHALT</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        {navLinks.map(link => (
+          <li>
+            <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
+          </li>
+        ))}
+        <li class="has-dropdown">
+          <button class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Services <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="dropdown">
+            {services.map(s => (
+              <li><a href={s.href}>{s.label}</a></li>
+            ))}
+          </ul>
+        </li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="/contact" class="btn-primary">Get a Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul>
+      {navLinks.map(link => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+      <li class="mobile-section-label">Services</li>
+      {services.map(s => (
+        <li class="mobile-indent"><a href={s.href}>{s.label}</a></li>
+      ))}
+      <li class="mobile-cta"><a href="/contact" class="btn-primary">Get a Free Quote</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  #site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .header-top {
+    background-color: #0A0A0A;
+    border-bottom: 1px solid #1A1A1A;
+    font-size: 0.75rem;
+    color: #888;
+    padding: 0.4rem 0;
+  }
+
+  .header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-top a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .header-top a:hover {
+    color: #F5B800;
+  }
+
+  .main-nav {
+    background-color: #111111;
+    border-bottom: 2px solid #F5B800;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    gap: 2rem;
+  }
+
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .logo-jc {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #F5B800;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-asphalt {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #F0F0F0;
+    letter-spacing: 0.2em;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem;
+    align-items: center;
+  }
+
+  .nav-links a,
+  .dropdown-trigger {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .nav-links a:hover,
+  .dropdown-trigger:hover,
+  .nav-links a.active {
+    color: #F5B800;
+  }
+
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    border-top: 2px solid #F5B800;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 10;
+  }
+
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    display: block;
+  }
+
+  .dropdown a {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+    display: block;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #F0F0F0;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111;
+    z-index: 99;
+    overflow-y: auto;
+    padding: 6rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-menu a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #1A1A1A;
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:hover {
+    color: #F5B800;
+  }
+
+  .mobile-section-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #F5B800;
+    padding: 1.25rem 0 0.25rem;
+  }
+
+  .mobile-indent a {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    color: #888;
+  }
+
+  .mobile-cta {
+    padding-top: 2rem;
+  }
+
+  .mobile-cta .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+
+    .btn-primary {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.contains('open');
+    mobileMenu?.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    mobileMenu?.setAttribute('aria-hidden', String(isOpen));
+  });
+</script>

@@ -1,0 +1,804 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const stats = [
+  { number: '15+', label: 'Trained Crew Members' },
+  { number: '500+', label: 'Projects Completed' },
+  { number: '10+', label: 'Years in Business' },
+  { number: '1 Day', label: 'Average Completion' },
+];
+
+const services = [
+  {
+    icon: '▰',
+    title: 'Asphalt Paving',
+    desc: 'New installation, overlay, and full-depth reclamation for driveways, roads, and commercial lots.',
+    href: '/services/asphalt-paving',
+  },
+  {
+    icon: '⌂',
+    title: 'Residential Driveways',
+    desc: 'From prep to finish — your new driveway installed by a full crew, typically completed the same day.',
+    href: '/services/driveways',
+  },
+  {
+    icon: '▦',
+    title: 'Parking Lots',
+    desc: 'Commercial and HOA parking lot paving, striping, and maintenance across Utah Valley.',
+    href: '/services/parking-lots',
+  },
+  {
+    icon: '◫',
+    title: 'Concrete Work',
+    desc: 'Curbs, gutters, sidewalks, and flatwork to complement your asphalt project.',
+    href: '/services/concrete',
+  },
+];
+
+const differentiators = [
+  {
+    title: 'Full Crew. Every Job.',
+    desc: 'We don\'t send one guy and a wheelbarrow. Every project gets a trained team of professionals with the right equipment to get it done fast and right.',
+  },
+  {
+    title: 'Done in a Day.',
+    desc: 'Most driveways are completed sunup to sundown. You call us, we show up ready, and you have a new driveway before the day is over.',
+  },
+  {
+    title: 'Spanish Fork to Salt Lake.',
+    desc: 'We serve the entire Utah Valley corridor — from Payson and Spanish Fork north through Provo, Orem, Lehi, and into the Salt Lake Valley.',
+  },
+  {
+    title: 'Local. Family-Run.',
+    desc: 'Founded by Andrew Jeffery with deep roots in Utah Valley. We treat every project like it\'s in our own neighborhood — because it usually is.',
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Conrad',
+    text: 'Andrew and his team did a fantastic job on our driveway. They were professional, fast, and the quality is outstanding. Would recommend to anyone in the valley.',
+    stars: 5,
+  },
+  {
+    name: 'Jarod Jones',
+    text: 'J&C showed up on time, explained the whole process, and had my parking area completely paved in less than a day. Couldn\'t be happier with the results.',
+    stars: 5,
+  },
+  {
+    name: 'Local Homeowner',
+    text: 'Best asphalt contractor I\'ve worked with in Utah Valley. Fair pricing, professional crew, and a finished product that looks great. Highly recommend.',
+    stars: 5,
+  },
+];
+
+const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi', 'American Fork', 'Pleasant Grove', 'Lindon', 'Mapleton', 'Salem', 'Santaquin', 'Vineyard', 'Eagle Mountain'];
+---
+
+<Layout
+  title="J&C Asphalt | Utah Valley's Professional Asphalt Paving Contractor"
+  description="J&C Asphalt is Utah Valley's top residential asphalt paving contractor. Full crews, same-day driveway completion, serving Spanish Fork to Salt Lake City. Get a free quote today."
+>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="section-label">Utah Valley's #1 Asphalt Contractor</span>
+      <h1>Your Driveway.<br />Done in a Day.</h1>
+      <p class="hero-sub">We show up with a full crew, professional equipment, and everything needed to complete your project from sunup to sundown. Serving Spanish Fork to Salt Lake City.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="/work" class="btn-outline">See Our Work</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="#F5B800" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      {stats.map(stat => (
+        <div class="stat-item">
+          <span class="stat-number">{stat.number}</span>
+          <span class="stat-label">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Everything You Need. One Team. One Day.</h2>
+        <p class="section-sub">From residential driveways to commercial parking lots, J&amp;C Asphalt has the crew and equipment to handle projects of any scale — without subcontracting or delays.</p>
+      </div>
+      <div class="services-grid">
+        {services.map(s => (
+          <a href={s.href} class="service-card">
+            <div class="service-icon">{s.icon}</div>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="card-link">Learn More &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY J&C -->
+  <section class="section-pad why-section">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-image">
+          <img
+            src="https://placehold.co/600x700/1A1A1A/F5B800?text=Crew+At+Work"
+            alt="J&C Asphalt crew completing a driveway project in Utah Valley"
+            width="600"
+            height="700"
+            loading="lazy"
+          />
+          <div class="why-badge">
+            <span class="badge-number">1 Day</span>
+            <span class="badge-label">Average Project Completion</span>
+          </div>
+        </div>
+        <div class="why-content">
+          <span class="section-label">Why Choose J&amp;C</span>
+          <h2 class="section-title">The Fastest Crew in Utah Valley</h2>
+          <p class="why-intro">Unlike a solo contractor or small-crew operation, we field a full professional team on every single job. That means no waiting days for your project to finish — it gets done right, the first time, in a single day.</p>
+          <div class="differentiators">
+            {differentiators.map(d => (
+              <div class="diff-item">
+                <div class="diff-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#F5B800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <strong>{d.title}</strong>
+                  <p>{d.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a href="/about" class="btn-outline-yellow" style="margin-top: 2rem; display: inline-block;">Meet the Team &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-sub">Every job completed by our crew across Utah Valley. Real projects. Real results.</p>
+      </div>
+      <div class="projects-grid">
+        {[
+          { label: 'Residential Driveway', location: 'Spanish Fork, UT', type: 'Paving' },
+          { label: 'Commercial Parking Lot', location: 'Provo, UT', type: 'Paving' },
+          { label: 'Driveway Installation', location: 'Springville, UT', type: 'Paving' },
+          { label: 'Land Clearing + Paving', location: 'Payson, UT', type: 'Land Clearing' },
+          { label: 'HOA Parking Lot', location: 'Orem, UT', type: 'Parking Lot' },
+          { label: 'Aggregate Driveway', location: 'Mapleton, UT', type: 'Aggregate' },
+        ].map(p => (
+          <div class="project-card">
+            <div class="project-img">
+              <img
+                src={`https://placehold.co/600x420/1A1A1A/555555?text=${encodeURIComponent(p.type)}`}
+                alt={`${p.label} in ${p.location}`}
+                width="600"
+                height="420"
+                loading="lazy"
+              />
+              <span class="project-type">{p.type}</span>
+            </div>
+            <div class="project-info">
+              <strong>{p.label}</strong>
+              <span>{p.location}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="projects-cta">
+        <a href="/work" class="btn-outline-yellow">View All Projects &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="section-pad areas-section">
+    <div class="container">
+      <div class="areas-inner">
+        <div class="areas-content">
+          <span class="section-label">Where We Work</span>
+          <h2 class="section-title">Serving the Entire Utah Valley Corridor</h2>
+          <p>From Santaquin in the south to Salt Lake in the north, J&amp;C Asphalt covers it all. If you're in Utah Valley, we're your team.</p>
+          <a href="/service-areas" class="btn-primary" style="margin-top: 1.5rem; display: inline-block;">View All Service Areas</a>
+        </div>
+        <div class="areas-grid">
+          {areas.map(city => (
+            <div class="area-pill">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#F5B800" opacity="0.3"/><circle cx="6" cy="6" r="3" fill="#F5B800"/></svg>
+              {city}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What Clients Say</span>
+        <h2 class="section-title">Don't Take Our Word for It</h2>
+      </div>
+      <div class="testimonials-grid">
+        {testimonials.map(t => (
+          <div class="testimonial-card">
+            <div class="stars">
+              {'★'.repeat(t.stars)}
+            </div>
+            <p>"{t.text}"</p>
+            <strong>{t.name}</strong>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <div class="container">
+      <span class="section-label">Start Today</span>
+      <h2>Ready for a New Driveway?</h2>
+      <p>Get a free, no-obligation quote and find out why homeowners across Utah Valley trust J&amp;C Asphalt to get the job done right — the first time.</p>
+      <div class="bottom-cta-buttons">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:+14354064640" class="btn-outline">Call (435) 406-4640</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://placehold.co/1920x1080/111111/222222?text=Hero+Image+-+Crew+at+Work');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.75) 50%,
+      rgba(0,0,0,0.4) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    max-width: 700px;
+  }
+
+  .hero-content h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.05;
+    color: #F0F0F0;
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: #B0B0B0;
+    line-height: 1.7;
+    max-width: 540px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* STATS */
+  .stats-bar {
+    background-color: #F5B800;
+    padding: 2.5rem 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1A1A1A;
+  }
+
+  /* SECTION LAYOUT */
+  .section-pad {
+    padding: 5rem 0;
+  }
+
+  .section-dark {
+    background-color: #111111;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .section-sub {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    padding: 2rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: block;
+  }
+
+  .service-card:hover {
+    border-color: #F5B800;
+    transform: translateY(-4px);
+  }
+
+  .service-icon {
+    font-size: 1.75rem;
+    color: #F5B800;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F5B800;
+  }
+
+  /* WHY J&C */
+  .why-section {
+    background-color: #0A0A0A;
+  }
+
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .why-image {
+    position: relative;
+  }
+
+  .why-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .why-badge {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background-color: #F5B800;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .badge-number {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+  }
+
+  .badge-label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 0.25rem;
+  }
+
+  .why-intro {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 1rem 0 2rem;
+  }
+
+  .differentiators {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .diff-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .diff-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(245, 184, 0, 0.1);
+    border: 1px solid rgba(245, 184, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  .diff-item strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .diff-item p {
+    font-size: 0.875rem;
+    color: #888;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    overflow: hidden;
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    transition: border-color 0.2s;
+  }
+
+  .project-card:hover {
+    border-color: #F5B800;
+  }
+
+  .project-img {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-img img {
+    transform: scale(1.04);
+  }
+
+  .project-type {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background-color: #F5B800;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .project-info {
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .project-info strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    letter-spacing: 0.03em;
+  }
+
+  .project-info span {
+    font-size: 0.8rem;
+    color: #888;
+  }
+
+  .projects-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  /* SERVICE AREAS */
+  .areas-section {
+    background-color: #0A0A0A;
+  }
+
+  .areas-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .areas-content h2 {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .areas-content p {
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .areas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .area-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    padding: 0.5rem 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #B0B0B0;
+    text-transform: uppercase;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background-color: #1A1A1A;
+    border: 1px solid #2A2A2A;
+    padding: 2rem;
+    border-top: 3px solid #F5B800;
+  }
+
+  .stars {
+    color: #F5B800;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.9rem;
+    color: #B0B0B0;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+
+  .testimonial-card strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #F0F0F0;
+  }
+
+  /* BOTTOM CTA */
+  .bottom-cta {
+    background-color: #F5B800;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .bottom-cta .section-label {
+    color: rgba(0,0,0,0.6);
+  }
+
+  .bottom-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0.25rem 0 1rem;
+  }
+
+  .bottom-cta p {
+    font-size: 1.05rem;
+    color: rgba(0,0,0,0.7);
+    max-width: 540px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  .bottom-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .bottom-cta .btn-primary {
+    background-color: #000;
+    color: #F5B800;
+  }
+
+  .bottom-cta .btn-primary:hover {
+    background-color: #1A1A1A;
+  }
+
+  .bottom-cta .btn-outline {
+    border-color: #000;
+    color: #000;
+  }
+
+  .bottom-cta .btn-outline:hover {
+    background-color: #000;
+    color: #F5B800;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-inner,
+    .areas-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .why-badge {
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .projects-grid,
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-ctas {
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,262 @@
+---
+const services = [
+  { label: 'Asphalt Paving', href: '/services/asphalt-paving' },
+  { label: 'Residential Driveways', href: '/services/driveways' },
+  { label: 'Parking Lots', href: '/services/parking-lots' },
+  { label: 'Concrete Work', href: '/services/concrete' },
+];
+
+const quickLinks = [
+  { label: 'About Us', href: '/about' },
+  { label: 'Our Work', href: '/work' },
+  { label: 'Service Areas', href: '/service-areas' },
+  { label: 'Get a Quote', href: '/contact' },
+];
+
+const cities = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi', 'American Fork', 'Pleasant Grove'];
+---
+
+<footer>
+  <div class="footer-cta">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <span class="section-label">Ready to Get Started?</span>
+          <h2>Your Project. Done Right. Done Fast.</h2>
+          <p>Call us today or fill out a quote request and we'll get back to you within 24 hours.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn-primary">Get a Free Quote</a>
+          <a href="tel:+14354064640" class="btn-outline">Call (435) 406-4640</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-jc">J&amp;C</span>
+            <span class="logo-asphalt">ASPHALT</span>
+          </a>
+          <p>Utah Valley's professional asphalt paving team. Serving Spanish Fork to Salt Lake City with full-crew project completion — often in a single day.</p>
+          <div class="footer-contact">
+            <a href="tel:+14354064640">(435) 406-4640</a>
+            <a href="mailto:jcasphalt.contracting@gmail.com">jcasphalt.contracting@gmail.com</a>
+            <span>Provo, Utah</span>
+            <span>Mon–Fri &nbsp;|&nbsp; 9AM – 6PM</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            {services.map(s => <li><a href={s.href}>{s.label}</a></li>)}
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            {quickLinks.map(l => <li><a href={l.href}>{l.label}</a></li>)}
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            {cities.map(c => <li><span>{c}</span></li>)}
+            <li><a href="/service-areas">View All Areas &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; {new Date().getFullYear()} J&amp;C Asphalt. All Rights Reserved.</span>
+      <a href="/privacy-policy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #0A0A0A;
+    border-top: 1px solid #1A1A1A;
+  }
+
+  .footer-cta {
+    background-color: #111111;
+    padding: 4rem 0;
+    border-bottom: 1px solid #1A1A1A;
+  }
+
+  .cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-inner h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #F0F0F0;
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .cta-inner p {
+    color: #888;
+    font-size: 1rem;
+    max-width: 500px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .footer-main {
+    padding: 4rem 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo-jc {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #F5B800;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-asphalt {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #F0F0F0;
+    letter-spacing: 0.2em;
+  }
+
+  .footer-brand p {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .footer-contact a,
+  .footer-contact span {
+    font-size: 0.85rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-contact a:hover {
+    color: #F5B800;
+  }
+
+  .footer-col h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #F5B800;
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-col a,
+  .footer-col span {
+    font-size: 0.85rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover {
+    color: #F0F0F0;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #1A1A1A;
+    padding: 1.25rem 0;
+  }
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom span,
+  .footer-bottom a {
+    font-size: 0.8rem;
+    color: #555;
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+    color: #888;
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+
+    .cta-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

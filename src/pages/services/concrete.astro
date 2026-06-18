@@ -1,0 +1,211 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Concrete Work | J&C Asphalt — Utah Valley"
+  description="Concrete curbs, gutters, sidewalks, and flatwork throughout Utah Valley. J&C Asphalt handles concrete work as part of complete paving projects."
+>
+  <section class="service-hero">
+    <div class="container">
+      <span class="section-label">Additional Services</span>
+      <h1 class="section-title">Concrete Work &amp; Flatwork</h1>
+      <p>Curbs, gutters, sidewalks, and custom flatwork to complement your asphalt project or stand alone. One contractor, complete job.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Get a Quote</a>
+        <a href="/work" class="btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="overview-inner">
+        <div>
+          <span class="section-label">Concrete Services</span>
+          <h2 class="section-title">One Crew. Both Materials.</h2>
+          <p>Many asphalt jobs also require concrete work — curbs, gutters, borders, or aprons. Rather than coordinating two separate contractors, J&amp;C Asphalt handles both, keeping your project on one timeline and one invoice.</p>
+          <ul class="service-list">
+            <li>Concrete curbs and gutters</li>
+            <li>Sidewalks and walkways</li>
+            <li>Concrete aprons and approaches</li>
+            <li>Flatwork pads and slabs</li>
+            <li>Decorative concrete borders</li>
+            <li>Concrete repair and replacement</li>
+          </ul>
+          <a href="/contact" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Request a Concrete Quote</a>
+        </div>
+        <div>
+          <img
+            src="https://placehold.co/560x480/1A1A1A/F5B800?text=Concrete+Work"
+            alt="Concrete curb and gutter installation by J&C Asphalt"
+            width="560"
+            height="480"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="combo-callout">
+        <div class="combo-text">
+          <span class="section-label">Better Together</span>
+          <h2 class="section-title">Asphalt + Concrete in One Project</h2>
+          <p>Most driveways and parking lots benefit from concrete curbing or bordering. Handling both materials with one crew eliminates scheduling conflicts, reduces costs, and produces a cleaner final result.</p>
+          <p>When you work with J&amp;C Asphalt, your entire project — asphalt and concrete — gets done by one professional team on one coordinated timeline.</p>
+          <a href="/contact" class="btn-outline-yellow" style="margin-top: 1.5rem; display: inline-block;">Talk to Our Team</a>
+        </div>
+        <div class="combo-image">
+          <img
+            src="https://placehold.co/520x420/1A1A1A/F5B800?text=Combined+Project"
+            alt="Asphalt and concrete combined driveway project by J&C Asphalt"
+            width="520"
+            height="420"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Recent Work</span>
+        <h2 class="section-title">Concrete Projects</h2>
+      </div>
+      <div class="mini-gallery">
+        {[1,2,3].map(n => (
+          <img
+            src={`https://placehold.co/560x380/1A1A1A/444444?text=Concrete+Project+${n}`}
+            alt={`Concrete project ${n} by J&C Asphalt`}
+            width="560"
+            height="380"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="container">
+      <h2>Ready for a Concrete Quote?</h2>
+      <p>Whether it's standalone concrete work or part of a larger paving project, we'll get you a fast, free estimate.</p>
+      <a href="/contact" class="btn-primary" style="background:#000; color:#F5B800;">Get a Free Quote</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-hero {
+    padding: 8rem 0 5rem;
+    background-color: #111111;
+    border-bottom: 3px solid #F5B800;
+  }
+
+  .service-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.5rem 0 1rem; }
+  .service-hero p { color: #888; font-size: 1.05rem; line-height: 1.7; max-width: 600px; margin-bottom: 1.75rem; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .section-pad { padding: 5rem 0; }
+  .section-dark { background-color: #111111; }
+
+  .section-header {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 3rem;
+  }
+
+  .overview-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .overview-inner h2 { margin: 0.5rem 0 1rem; }
+  .overview-inner > div > p { color: #888; font-size: 0.95rem; line-height: 1.75; margin-bottom: 1rem; }
+  .overview-inner img { width: 100%; height: auto; display: block; }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .service-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #B0B0B0;
+  }
+
+  .service-list li::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 9l4 4 8-8' stroke='%23F5B800' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  .combo-callout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .combo-text h2 { margin: 0.5rem 0 1rem; }
+  .combo-text p { color: #888; font-size: 0.95rem; line-height: 1.75; margin-bottom: 1rem; }
+  .combo-image img { width: 100%; height: auto; display: block; }
+
+  .mini-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .mini-gallery img { width: 100%; height: auto; display: block; }
+
+  .service-cta {
+    background-color: #F5B800;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .service-cta h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-cta p {
+    color: rgba(0,0,0,0.7);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 900px) {
+    .overview-inner, .combo-callout { grid-template-columns: 1fr; gap: 3rem; }
+    .mini-gallery { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 580px) {
+    .mini-gallery { grid-template-columns: 1fr; }
+  }
+</style>

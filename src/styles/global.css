@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-jc-black: #0A0A0A;
+  --color-jc-dark: #111111;
+  --color-jc-mid: #1A1A1A;
+  --color-jc-card: #222222;
+  --color-jc-yellow: #F5B800;
+  --color-jc-yellow-dark: #D4A000;
+  --color-jc-orange: #CC4400;
+  --color-jc-white: #F0F0F0;
+  --color-jc-muted: #888888;
+  --color-jc-border: #2A2A2A;
+
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--color-jc-black);
+    color: var(--color-jc-white);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-block;
+    background-color: var(--color-jc-yellow);
+    color: #000;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-jc-yellow-dark);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    border: 2px solid var(--color-jc-white);
+    color: var(--color-jc-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-jc-white);
+    color: #000;
+  }
+
+  .btn-outline-yellow {
+    display: inline-block;
+    border: 2px solid var(--color-jc-yellow);
+    color: var(--color-jc-yellow);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-outline-yellow:hover {
+    background-color: var(--color-jc-yellow);
+    color: #000;
+  }
+
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-jc-yellow);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--color-jc-white);
+  }
+
+  .page-hero {
+    padding: 8rem 0 5rem;
+    background-color: var(--color-jc-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-jc-yellow);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .service-card {
+    background-color: var(--color-jc-card);
+    border: 1px solid var(--color-jc-border);
+    padding: 2rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: block;
+  }
+
+  .service-card:hover {
+    border-color: var(--color-jc-yellow);
+    transform: translateY(-4px);
+  }
+}
