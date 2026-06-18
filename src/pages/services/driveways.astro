@@ -38,7 +38,7 @@ import Layout from '../../layouts/Layout.astro';
         </div>
         <div>
           <img
-            src="https://placehold.co/560x520/1A1A1A/cd553f?text=Driveway+Project"
+            src="/images/parking-roller.jpg"
             alt="Freshly paved residential driveway by J&C Asphalt"
             width="560"
             height="520"
@@ -84,10 +84,10 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="section-title">Driveway Projects</h2>
       </div>
       <div class="mini-gallery">
-        {[1,2,3].map(n => (
+        {['/images/crew-work-2.jpg', '/images/crew-work-10.jpg', '/images/parking-closeup.jpg'].map((src, i) => (
           <img
-            src={`https://placehold.co/560x380/1A1A1A/444444?text=Driveway+${n}`}
-            alt={`Residential driveway project ${n} by J&C Asphalt`}
+            src={src}
+            alt={`Residential driveway project ${i + 1} by J&C Asphalt`}
             width="560"
             height="380"
             loading="lazy"

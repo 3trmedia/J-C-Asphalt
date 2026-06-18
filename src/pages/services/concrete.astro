@@ -37,7 +37,7 @@ import Layout from '../../layouts/Layout.astro';
         </div>
         <div>
           <img
-            src="https://placehold.co/560x480/1A1A1A/cd553f?text=Concrete+Work"
+            src="/images/concrete-working.jpg"
             alt="Concrete curb and gutter installation by J&C Asphalt"
             width="560"
             height="480"
@@ -60,7 +60,7 @@ import Layout from '../../layouts/Layout.astro';
         </div>
         <div class="combo-image">
           <img
-            src="https://placehold.co/520x420/1A1A1A/cd553f?text=Combined+Project"
+            src="/images/concrete-finished.jpg"
             alt="Asphalt and concrete combined driveway project by J&C Asphalt"
             width="520"
             height="420"
@@ -78,10 +78,10 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="section-title">Concrete Projects</h2>
       </div>
       <div class="mini-gallery">
-        {[1,2,3].map(n => (
+        {['/images/concrete-finished.jpg', '/images/concrete-working.jpg', '/images/crew-work-7.jpg'].map((src, i) => (
           <img
-            src={`https://placehold.co/560x380/1A1A1A/444444?text=Concrete+Project+${n}`}
-            alt={`Concrete project ${n} by J&C Asphalt`}
+            src={src}
+            alt={`Concrete project ${i + 1} by J&C Asphalt`}
             width="560"
             height="380"
             loading="lazy"

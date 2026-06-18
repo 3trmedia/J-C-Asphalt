@@ -136,7 +136,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
       <div class="why-inner">
         <div class="why-image">
           <img
-            src="https://placehold.co/600x700/1A1A1A/cd553f?text=Crew+At+Work"
+            src="/images/crew-work-4.jpg"
             alt="J&C Asphalt crew completing a driveway project in Utah Valley"
             width="600"
             height="700"
@@ -180,17 +180,17 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
       </div>
       <div class="projects-grid">
         {[
-          { label: 'Residential Driveway', location: 'Spanish Fork, UT', type: 'Paving' },
-          { label: 'Commercial Parking Lot', location: 'Provo, UT', type: 'Paving' },
-          { label: 'Driveway Installation', location: 'Springville, UT', type: 'Paving' },
-          { label: 'Land Clearing + Paving', location: 'Payson, UT', type: 'Land Clearing' },
-          { label: 'HOA Parking Lot', location: 'Orem, UT', type: 'Parking Lot' },
-          { label: 'Aggregate Driveway', location: 'Mapleton, UT', type: 'Aggregate' },
+          { label: 'Residential Driveway', location: 'Spanish Fork, UT', type: 'Paving', img: '/images/crew-work-2.jpg' },
+          { label: 'Commercial Parking Lot', location: 'Provo, UT', type: 'Parking Lot', img: '/images/parking-completed.jpg' },
+          { label: 'Driveway Installation', location: 'Springville, UT', type: 'Paving', img: '/images/crew-work-3.jpg' },
+          { label: 'Land Clearing + Paving', location: 'Payson, UT', type: 'Land Clearing', img: '/images/land-house.jpg' },
+          { label: 'HOA Parking Lot', location: 'Orem, UT', type: 'Parking Lot', img: '/images/aerial-2.jpg' },
+          { label: 'Aggregate Driveway', location: 'Mapleton, UT', type: 'Aggregate', img: '/images/parking-closeup.jpg' },
         ].map(p => (
           <div class="project-card">
             <div class="project-img">
               <img
-                src={`https://placehold.co/600x420/1A1A1A/555555?text=${encodeURIComponent(p.type)}`}
+                src={p.img}
                 alt={`${p.label} in ${p.location}`}
                 width="600"
                 height="420"
@@ -281,7 +281,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://placehold.co/1920x1080/111111/222222?text=Hero+Image+-+Crew+at+Work');
+    background-image: url('/images/aerial-1.jpg');
     background-size: cover;
     background-position: center;
   }

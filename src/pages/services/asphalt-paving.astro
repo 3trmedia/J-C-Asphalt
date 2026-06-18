@@ -30,7 +30,7 @@ const process = [
       <div class="overview-inner">
         <div class="overview-image">
           <img
-            src="https://placehold.co/580x480/1A1A1A/cd553f?text=Asphalt+Paving"
+            src="/images/crew-work-5.jpg"
             alt="J&C Asphalt crew completing an asphalt paving project in Utah Valley"
             width="580"
             height="480"
@@ -80,11 +80,11 @@ const process = [
         <h2 class="section-title">Asphalt Projects</h2>
       </div>
       <div class="mini-gallery">
-        {[1,2,3].map(n => (
+        {['/images/aerial-1.jpg', '/images/crew-work-1.jpg', '/images/crew-work-3.jpg'].map((src, i) => (
           <div class="gallery-item">
             <img
-              src={`https://placehold.co/560x380/1A1A1A/444444?text=Asphalt+Project+${n}`}
-              alt={`J&C Asphalt paving project ${n}`}
+              src={src}
+              alt={`J&C Asphalt paving project ${i + 1}`}
               width="560"
               height="380"
               loading="lazy"
