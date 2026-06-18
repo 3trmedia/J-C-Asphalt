@@ -268,6 +268,34 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   </section>
 </Layout>
 
+<style is:global>
+  /* Override accent color tokens for this page */
+  :root {
+    --color-jc-red: #F5B800;
+    --color-jc-red-dark: #cc9900;
+  }
+
+  /* Nav — hardcoded hex overrides */
+  .main-nav { border-bottom-color: #F5B800 !important; }
+  .dropdown { border-top-color: #F5B800 !important; }
+  .nav-links a:hover,
+  .dropdown-trigger:hover,
+  .nav-links a.active { color: #F5B800 !important; }
+  .header-top a:hover { color: #F5B800 !important; }
+  .mobile-section-label { color: #F5B800 !important; }
+  .mobile-menu a:hover { color: #F5B800 !important; }
+
+  /* Logo — shift orange PNG hue toward yellow */
+  .logo img,
+  .mobile-logo img {
+    filter: hue-rotate(30deg) brightness(1.08) saturate(1.1);
+  }
+
+  /* Footer — hardcoded hex overrides */
+  .footer-col h4 { color: #F5B800 !important; }
+  .footer-contact a:hover { color: #F5B800 !important; }
+</style>
+
 <style>
   /* LOCAL YELLOW OUTLINE BUTTON */
   .btn-outline-yellow {
