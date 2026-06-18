@@ -58,6 +58,14 @@ const currentPath = Astro.url.pathname;
   </nav>
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-header">
+      <a href="/" class="mobile-logo">
+        <img src="/images/logo-white.png" alt="J&C Asphalt" height="36" />
+      </a>
+      <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#F0F0F0" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
     <ul>
       {navLinks.map(link => (
         <li><a href={link.href}>{link.label}</a></li>
@@ -128,22 +136,7 @@ const currentPath = Astro.url.pathname;
     height: 42px;
     width: auto;
     display: block;
-  }
-
-  .logo-jc {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #cd553f;
-    letter-spacing: 0.05em;
-  }
-
-  .logo-asphalt {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #F0F0F0;
-    letter-spacing: 0.2em;
+    max-height: 42px;
   }
 
   .nav-links {
@@ -246,9 +239,34 @@ const currentPath = Astro.url.pathname;
     background-color: #111111;
     z-index: 99;
     overflow-y: auto;
-    padding: 6rem 2rem 2rem;
+    padding: 0 2rem 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
+  }
+
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #1A1A1A;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+
+  .mobile-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: #F0F0F0;
+    display: flex;
+    align-items: center;
   }
 
   .mobile-menu.open {
@@ -324,12 +342,24 @@ const currentPath = Astro.url.pathname;
 
 <script>
   const hamburger = document.getElementById('hamburger');
+  const mobileClose = document.getElementById('mobile-close');
   const mobileMenu = document.getElementById('mobile-menu');
 
+  function openMenu() {
+    mobileMenu?.classList.add('open');
+    hamburger?.setAttribute('aria-expanded', 'true');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.remove('open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
+  }
+
   hamburger?.addEventListener('click', () => {
-    const isOpen = mobileMenu?.classList.contains('open');
-    mobileMenu?.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', String(!isOpen));
-    mobileMenu?.setAttribute('aria-hidden', String(isOpen));
+    mobileMenu?.classList.contains('open') ? closeMenu() : openMenu();
   });
+
+  mobileClose?.addEventListener('click', closeMenu);
 </script>
