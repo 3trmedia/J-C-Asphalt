@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 
 const stats = [
@@ -93,7 +93,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
       </div>
     </div>
     <div class="hero-scroll-hint">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="#F5B800" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="#cd553f" stroke-width="2" stroke-linecap="round"/></svg>
     </div>
   </section>
 
@@ -155,7 +155,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
             {differentiators.map(d => (
               <div class="diff-item">
                 <div class="diff-icon">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#F5B800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="#cd553f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
                 <div>
                   <strong>{d.title}</strong>
@@ -164,7 +164,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
               </div>
             ))}
           </div>
-          <a href="/about" class="btn-outline-yellow" style="margin-top: 2rem; display: inline-block;">Meet the Team &rarr;</a>
+          <a href="/about" class="btn-outline-red" style="margin-top: 2rem; display: inline-block;">Meet the Team &rarr;</a>
         </div>
       </div>
     </div>
@@ -206,7 +206,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
         ))}
       </div>
       <div class="projects-cta">
-        <a href="/work" class="btn-outline-yellow">View All Projects &rarr;</a>
+        <a href="/work" class="btn-outline-red">View All Projects &rarr;</a>
       </div>
     </div>
   </section>
@@ -224,7 +224,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
         <div class="areas-grid">
           {areas.map(city => (
             <div class="area-pill">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#F5B800" opacity="0.3"/><circle cx="6" cy="6" r="3" fill="#F5B800"/></svg>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="6" fill="#cd553f" opacity="0.3"/><circle cx="6" cy="6" r="3" fill="#cd553f"/></svg>
               {city}
             </div>
           ))}
@@ -306,7 +306,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .hero-content h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -345,7 +345,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   /* STATS */
   .stats-bar {
-    background-color: #F5B800;
+    background-color: #cd553f;
     padding: 2.5rem 0;
   }
 
@@ -363,7 +363,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .stat-number {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     color: #000;
@@ -371,7 +371,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .stat-label {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -418,18 +418,18 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .service-card:hover {
-    border-color: #F5B800;
+    border-color: #cd553f;
     transform: translateY(-4px);
   }
 
   .service-icon {
     font-size: 1.75rem;
-    color: #F5B800;
+    color: #cd553f;
     margin-bottom: 1rem;
   }
 
   .service-card h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -445,11 +445,11 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .card-link {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #F5B800;
+    color: #cd553f;
   }
 
   /* WHY J&C */
@@ -478,14 +478,14 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     position: absolute;
     bottom: -1.5rem;
     right: -1.5rem;
-    background-color: #F5B800;
+    background-color: #cd553f;
     padding: 1.5rem;
     text-align: center;
   }
 
   .badge-number {
     display: block;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: #000;
@@ -494,7 +494,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .badge-label {
     display: block;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -526,8 +526,8 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     flex-shrink: 0;
     width: 32px;
     height: 32px;
-    background-color: rgba(245, 184, 0, 0.1);
-    border: 1px solid rgba(245, 184, 0, 0.3);
+    background-color: rgba(205, 85, 63, 0.1);
+    border: 1px solid rgba(205, 85, 63, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -535,7 +535,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .diff-item strong {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -567,7 +567,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .project-card:hover {
-    border-color: #F5B800;
+    border-color: #cd553f;
   }
 
   .project-img {
@@ -591,9 +591,9 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     position: absolute;
     top: 0.75rem;
     left: 0.75rem;
-    background-color: #F5B800;
+    background-color: #cd553f;
     color: #000;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -609,7 +609,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .project-info strong {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -662,7 +662,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     background-color: #1A1A1A;
     border: 1px solid #2A2A2A;
     padding: 0.5rem 1rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -681,11 +681,11 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     background-color: #1A1A1A;
     border: 1px solid #2A2A2A;
     padding: 2rem;
-    border-top: 3px solid #F5B800;
+    border-top: 3px solid #cd553f;
   }
 
   .stars {
-    color: #F5B800;
+    color: #cd553f;
     font-size: 1rem;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
@@ -700,7 +700,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .testimonial-card strong {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -710,7 +710,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   /* BOTTOM CTA */
   .bottom-cta {
-    background-color: #F5B800;
+    background-color: #cd553f;
     padding: 5rem 0;
     text-align: center;
   }
@@ -720,7 +720,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .bottom-cta h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
     text-transform: uppercase;
@@ -745,7 +745,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .bottom-cta .btn-primary {
     background-color: #000;
-    color: #F5B800;
+    color: #cd553f;
   }
 
   .bottom-cta .btn-primary:hover {
@@ -759,7 +759,7 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   .bottom-cta .btn-outline:hover {
     background-color: #000;
-    color: #F5B800;
+    color: #cd553f;
   }
 
   /* RESPONSIVE */

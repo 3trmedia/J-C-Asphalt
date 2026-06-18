@@ -5,15 +5,14 @@
   --color-jc-dark: #111111;
   --color-jc-mid: #1A1A1A;
   --color-jc-card: #222222;
-  --color-jc-yellow: #F5B800;
-  --color-jc-yellow-dark: #D4A000;
-  --color-jc-orange: #CC4400;
+  --color-jc-red: #cd553f;
+  --color-jc-red-dark: #a33d2a;
   --color-jc-white: #F0F0F0;
   --color-jc-muted: #888888;
   --color-jc-border: #2A2A2A;
 
-  --font-heading: 'Oswald', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
 }
 
 @layer base {
@@ -37,7 +36,7 @@
 @layer components {
   .btn-primary {
     display: inline-block;
-    background-color: var(--color-jc-yellow);
+    background-color: var(--color-jc-red);
     color: #000;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -50,7 +49,7 @@
   }
 
   .btn-primary:hover {
-    background-color: var(--color-jc-yellow-dark);
+    background-color: var(--color-jc-red-dark);
   }
 
   .btn-outline {
@@ -72,10 +71,10 @@
     color: #000;
   }
 
-  .btn-outline-yellow {
+  .btn-outline-red {
     display: inline-block;
-    border: 2px solid var(--color-jc-yellow);
-    color: var(--color-jc-yellow);
+    border: 2px solid var(--color-jc-red);
+    color: var(--color-jc-red);
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -86,8 +85,8 @@
     text-decoration: none;
   }
 
-  .btn-outline-yellow:hover {
-    background-color: var(--color-jc-yellow);
+  .btn-outline-red:hover {
+    background-color: var(--color-jc-red);
     color: #000;
   }
 
@@ -96,7 +95,7 @@
     font-size: 0.8rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-jc-yellow);
+    color: var(--color-jc-red);
     display: block;
     margin-bottom: 0.75rem;
   }
@@ -124,7 +123,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--color-jc-yellow);
+    background: var(--color-jc-red);
   }
 
   .container {
@@ -143,7 +142,7 @@
   }
 
   .service-card:hover {
-    border-color: var(--color-jc-yellow);
+    border-color: var(--color-jc-red);
     transform: translateY(-4px);
   }
 }

@@ -1,4 +1,4 @@
----
+﻿---
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
@@ -27,8 +27,7 @@ const currentPath = Astro.url.pathname;
   <nav class="main-nav">
     <div class="container nav-inner">
       <a href="/" class="logo">
-        <span class="logo-jc">J&amp;C</span>
-        <span class="logo-asphalt">ASPHALT</span>
+        <img src="/images/logo-horizontal.png" alt="J&C Asphalt" height="42" />
       </a>
 
       <ul class="nav-links" id="nav-links">
@@ -102,12 +101,12 @@ const currentPath = Astro.url.pathname;
   }
 
   .header-top a:hover {
-    color: #F5B800;
+    color: #cd553f;
   }
 
   .main-nav {
     background-color: #111111;
-    border-bottom: 2px solid #F5B800;
+    border-bottom: 2px solid #cd553f;
   }
 
   .nav-inner {
@@ -127,15 +126,15 @@ const currentPath = Astro.url.pathname;
   }
 
   .logo-jc {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.75rem;
     font-weight: 700;
-    color: #F5B800;
+    color: #cd553f;
     letter-spacing: 0.05em;
   }
 
   .logo-asphalt {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: #F0F0F0;
@@ -153,7 +152,7 @@ const currentPath = Astro.url.pathname;
 
   .nav-links a,
   .dropdown-trigger {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.08em;
@@ -173,7 +172,7 @@ const currentPath = Astro.url.pathname;
   .nav-links a:hover,
   .dropdown-trigger:hover,
   .nav-links a.active {
-    color: #F5B800;
+    color: #cd553f;
   }
 
   .has-dropdown {
@@ -187,7 +186,7 @@ const currentPath = Astro.url.pathname;
     left: 0;
     background-color: #1A1A1A;
     border: 1px solid #2A2A2A;
-    border-top: 2px solid #F5B800;
+    border-top: 2px solid #cd553f;
     list-style: none;
     padding: 0.5rem 0;
     margin: 0;
@@ -258,7 +257,7 @@ const currentPath = Astro.url.pathname;
   }
 
   .mobile-menu a {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -272,15 +271,15 @@ const currentPath = Astro.url.pathname;
   }
 
   .mobile-menu a:hover {
-    color: #F5B800;
+    color: #cd553f;
   }
 
   .mobile-section-label {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #F5B800;
+    color: #cd553f;
     padding: 1.25rem 0 0.25rem;
   }
 
