@@ -79,61 +79,8 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   title="J&C Asphalt | Utah Valley's Professional Asphalt Paving Contractor"
   description="J&C Asphalt is Utah Valley's top residential asphalt paving contractor. Full crews, same-day driveway completion, serving Spanish Fork to Salt Lake City. Get a free quote today."
 >
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- OPTION A: Equipment Cutout                     -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="hero hero-a">
-    <div class="option-tag">Option A</div>
-    <div class="hero-a-dark-panel"></div>
-    <div class="hero-a-text">
-      <span class="hero-a-label">Utah Valley's #1 Asphalt Contractor</span>
-      <h1>Your<br />Driveway.<br />Done in<br />a Day.</h1>
-      <div class="hero-a-rule"></div>
-      <p class="hero-sub">Full crew. Professional equipment. Residential driveways completed sunup to sundown.</p>
-      <div class="hero-ctas">
-        <a href="/contact" class="btn-primary">Get a Free Quote</a>
-        <a href="tel:+14354064640" class="hero-a-phone">(435) 406-4640</a>
-      </div>
-    </div>
-    <div class="hero-a-machine">
-      <img
-        src="/images/paver-cutout.png"
-        alt="LeeBoy 1000G asphalt paver"
-        width="900"
-        height="620"
-        loading="eager"
-      />
-      <div class="hero-a-stat-box">
-        <div class="ha-stat"><span>500+</span>Projects</div>
-        <div class="ha-stat"><span>15+</span>Crew Members</div>
-        <div class="ha-stat"><span>1 Day</span>Avg. Job</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- OPTION B: Full-Bleed Aerial Drone              -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="hero hero-b">
-    <div class="option-tag">Option B</div>
-    <div class="hero-b-bg"></div>
-    <div class="hero-b-overlay"></div>
-    <div class="hero-b-content">
-      <span class="section-label">Utah Valley's #1 Asphalt Contractor</span>
-      <h1>Your Driveway.<br />Done in a Day.</h1>
-      <p class="hero-sub">Full crew. Professional equipment. Residential driveways completed sunup to sundown. Serving Spanish Fork to Salt Lake City.</p>
-      <div class="hero-ctas">
-        <a href="/contact" class="btn-primary">Get a Free Quote</a>
-        <a href="/work" class="btn-outline-accent">See Our Work</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- OPTION C: Ground-Level Dramatic                -->
-  <!-- ═══════════════════════════════════════════════ -->
+  <!-- HERO -->
   <section class="hero hero-c">
-    <div class="option-tag option-tag-light">Option C</div>
     <div class="hero-c-bg"></div>
     <div class="hero-c-overlay"></div>
     <div class="hero-c-content">
@@ -360,211 +307,17 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 </style>
 
 <style>
-  /* ── SHARED HERO BASE ── */
+  /* ── HERO ── */
   .hero {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
   }
 
-  .hero-a {
-    padding-top: 94px; /* only first hero clears the fixed nav */
-  }
-
-  /* Option label badges */
-  .option-tag {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    background: #121212;
-    color: #fff;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0.4rem 1rem;
-    z-index: 10;
-  }
-
-  .option-tag-light {
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    backdrop-filter: blur(4px);
-  }
-
-  /* ── OPTION A: DIAGONAL SPLIT + CUTOUT ── */
-  .hero-a {
-    background: #ffffff;
-    display: grid;
-    grid-template-columns: 48fr 52fr;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-
-  /* Dark angled right panel */
-  .hero-a-dark-panel {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 57%;
-    background: #111111;
-    clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
-    z-index: 0;
-  }
-
-  .hero-a-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem 2.5rem 3rem clamp(1.5rem, 8vw, 6rem);
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-a-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #CD5535;
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  .hero-a-text h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(4rem, 6.5vw, 8rem);
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 0.88;
-    color: #121212;
-    margin: 0 0 1.5rem;
-    letter-spacing: -0.01em;
-  }
-
-  .hero-a-rule {
-    width: 60px;
-    height: 3px;
-    background: #CD5535;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-a-phone {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #555;
-    text-decoration: none;
-    transition: color 0.2s;
-    padding: 0.875rem 0;
-  }
-
-  .hero-a-phone:hover { color: #CD5535; }
-
-  /* Machine + stat box on dark side */
-  .hero-a-machine {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 2;
-    padding-bottom: 0;
-  }
-
-  .hero-a-machine img {
-    width: 125%;
-    max-width: none;
-    position: relative;
-    left: -12%;
-    bottom: -1.5rem;
-    display: block;
-    filter: drop-shadow(0 40px 60px rgba(0,0,0,0.85));
-  }
-
-  .hero-a-stat-box {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .ha-stat {
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.45);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-  }
-
-  .ha-stat span {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #CD5535;
-    line-height: 1;
-  }
-
-  /* ── OPTION B: FULL-BLEED AERIAL ── */
-  .hero-b {
-    display: flex;
-    align-items: center;
-  }
-
-  .hero-b-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('/images/aerial-drone-paving.jpg');
-    background-size: cover;
-    background-position: center 30%;
-  }
-
-  .hero-b-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(255,255,255,0.96) 0%,
-      rgba(255,255,255,0.82) 35%,
-      rgba(255,255,255,0.3) 65%,
-      rgba(255,255,255,0) 85%
-    );
-  }
-
-  .hero-b-content {
-    position: relative;
-    z-index: 2;
-    padding: 4rem clamp(1.5rem, 8vw, 6rem);
-    max-width: 620px;
-  }
-
-  .hero-b-content h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(3rem, 5vw, 5.5rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.0;
-    color: #121212;
-    margin: 0.5rem 0 1.25rem;
-  }
-
-  /* ── OPTION C: GROUND-LEVEL DRAMATIC ── */
   .hero-c {
     display: flex;
     align-items: center;
+    padding-top: 94px;
   }
 
   .hero-c-bg {
@@ -634,8 +387,6 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     margin-bottom: 2rem;
   }
 
-  .hero-a .hero-sub,
-  .hero-b .hero-sub { color: #555555; }
   .hero-c .hero-sub { color: #C0C0C0; }
 
   .hero-ctas {
@@ -1103,22 +854,6 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
 
   /* RESPONSIVE */
   @media (max-width: 1024px) {
-    .hero-a {
-      grid-template-columns: 1fr;
-    }
-
-    .hero-a-machine {
-      height: 50vw;
-      overflow: hidden;
-      justify-content: center;
-    }
-
-    .hero-a-machine img {
-      width: 90%;
-      left: 0;
-      bottom: 0;
-    }
-
     .services-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1144,11 +879,6 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     .projects-grid,
     .testimonials-grid {
       grid-template-columns: 1fr;
-    }
-
-    .hero-a-stats {
-      flex-wrap: wrap;
-      gap: 1rem;
     }
   }
 
