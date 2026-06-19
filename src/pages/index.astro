@@ -83,21 +83,16 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   <!-- OPTION A: Equipment Cutout                     -->
   <!-- ═══════════════════════════════════════════════ -->
   <section class="hero hero-a">
-    <div class="option-tag option-tag-light">Option A</div>
-    <div class="hero-a-bg"></div>
-    <div class="hero-a-overlay"></div>
+    <div class="option-tag">Option A</div>
+    <div class="hero-a-dark-panel"></div>
     <div class="hero-a-text">
       <span class="hero-a-label">Utah Valley's #1 Asphalt Contractor</span>
-      <h1>Your Driveway.<br />Done in a Day.</h1>
-      <p class="hero-sub">Full crew. Professional equipment. Residential driveways completed sunup to sundown. Serving Spanish Fork to Salt Lake City.</p>
+      <h1>Your<br />Driveway.<br />Done in<br />a Day.</h1>
+      <div class="hero-a-rule"></div>
+      <p class="hero-sub">Full crew. Professional equipment. Residential driveways completed sunup to sundown.</p>
       <div class="hero-ctas">
         <a href="/contact" class="btn-primary">Get a Free Quote</a>
-        <a href="/work" class="hero-a-outline-btn">See Our Work</a>
-      </div>
-      <div class="hero-a-stats">
-        <div class="ha-stat"><span>500+</span> Projects Completed</div>
-        <div class="ha-stat"><span>15+</span> Crew Members</div>
-        <div class="ha-stat"><span>1 Day</span> Average Job</div>
+        <a href="tel:+14354064640" class="hero-a-phone">(435) 406-4640</a>
       </div>
     </div>
     <div class="hero-a-machine">
@@ -108,6 +103,11 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
         height="620"
         loading="eager"
       />
+      <div class="hero-a-stat-box">
+        <div class="ha-stat"><span>500+</span>Projects</div>
+        <div class="ha-stat"><span>15+</span>Crew Members</div>
+        <div class="ha-stat"><span>1 Day</span>Avg. Job</div>
+      </div>
     </div>
   </section>
 
@@ -393,126 +393,129 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
     backdrop-filter: blur(4px);
   }
 
-  /* ── OPTION A: EQUIPMENT CUTOUT + DARK BG ── */
+  /* ── OPTION A: DIAGONAL SPLIT + CUTOUT ── */
   .hero-a {
-    background: #0a0a0a;
+    background: #ffffff;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 48fr 52fr;
+    min-height: 100vh;
+    overflow: hidden;
   }
 
-  .hero-a-bg {
+  /* Dark angled right panel */
+  .hero-a-dark-panel {
     position: absolute;
-    inset: 0;
-    background-image: url('/images/aerial-paver-top.jpg');
-    background-size: cover;
-    background-position: center 40%;
-  }
-
-  .hero-a-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(5,5,5,0.92) 0%,
-      rgba(5,5,5,0.85) 50%,
-      rgba(5,5,5,0.55) 100%
-    );
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 57%;
+    background: #111111;
+    clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
   }
 
   .hero-a-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem clamp(2rem, 4vw, 3.5rem) 3rem clamp(1.5rem, 8vw, 6rem);
+    padding: 3rem 2.5rem 3rem clamp(1.5rem, 8vw, 6rem);
     position: relative;
     z-index: 2;
   }
 
   .hero-a-label {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #CD5535;
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .hero-a-text h1 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+    font-size: clamp(4rem, 6.5vw, 8rem);
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 0.95;
-    color: #F0F0F0;
-    margin: 0 0 1.25rem;
+    line-height: 0.88;
+    color: #121212;
+    margin: 0 0 1.5rem;
     letter-spacing: -0.01em;
   }
 
-  .hero-a-outline-btn {
-    display: inline-block;
-    border: 2px solid rgba(240,240,240,0.55);
-    color: #F0F0F0;
+  .hero-a-rule {
+    width: 60px;
+    height: 3px;
+    background: #CD5535;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-a-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.875rem 2rem;
     font-size: 0.9rem;
-    transition: all 0.2s ease;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #555;
     text-decoration: none;
+    transition: color 0.2s;
+    padding: 0.875rem 0;
   }
 
-  .hero-a-outline-btn:hover {
-    background: rgba(240,240,240,0.1);
-    border-color: #F0F0F0;
-  }
+  .hero-a-phone:hover { color: #CD5535; }
 
+  /* Machine + stat box on dark side */
   .hero-a-machine {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    overflow: visible;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     position: relative;
     z-index: 2;
+    padding-bottom: 0;
   }
 
   .hero-a-machine img {
-    width: 120%;
+    width: 125%;
     max-width: none;
     position: relative;
-    left: -10%;
-    bottom: -1rem;
+    left: -12%;
+    bottom: -1.5rem;
     display: block;
-    filter: drop-shadow(0 32px 48px rgba(0,0,0,0.7));
+    filter: drop-shadow(0 40px 60px rgba(0,0,0,0.85));
   }
 
-  .hero-a-stats {
+  .hero-a-stat-box {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
     display: flex;
-    gap: 2rem;
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.12);
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .ha-stat {
     font-family: 'Barlow', sans-serif;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.45);
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
   }
 
   .ha-stat span {
-    display: block;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #CD5535;
     line-height: 1;
-    margin-bottom: 0.1rem;
   }
 
   /* ── OPTION B: FULL-BLEED AERIAL ── */
@@ -632,8 +635,8 @@ const areas = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi',
   }
 
   .hero-a .hero-sub,
-  .hero-c .hero-sub { color: #C0C0C0; }
   .hero-b .hero-sub { color: #555555; }
+  .hero-c .hero-sub { color: #C0C0C0; }
 
   .hero-ctas {
     display: flex;
