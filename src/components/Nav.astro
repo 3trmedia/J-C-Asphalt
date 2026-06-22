@@ -1,20 +1,15 @@
-﻿---
-const navLinksLeft = [
-  { label: 'Home', href: '/' },
-  { label: 'Home 2', href: '/home2' },
-];
-
-const navLinksRight = [
-  { label: 'Our Work', href: '/work' },
-  { label: 'Service Areas', href: '/service-areas' },
-  { label: 'About', href: '/about' },
-];
-
+---
 const services = [
   { label: 'Asphalt Paving', href: '/services/asphalt-paving' },
   { label: 'Residential Driveways', href: '/services/driveways' },
   { label: 'Parking Lots', href: '/services/parking-lots' },
   { label: 'Concrete Work', href: '/services/concrete' },
+];
+
+const navLinks = [
+  { label: 'Our Work', href: '/work' },
+  { label: 'Service Areas', href: '/service-areas' },
+  { label: 'About', href: '/about' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -35,11 +30,9 @@ const currentPath = Astro.url.pathname;
       </a>
 
       <ul class="nav-links" id="nav-links">
-        {navLinksLeft.map(link => (
-          <li>
-            <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
-          </li>
-        ))}
+        <li>
+          <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+        </li>
         <li class="has-dropdown">
           <button class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">
             Services <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -50,7 +43,7 @@ const currentPath = Astro.url.pathname;
             ))}
           </ul>
         </li>
-        {navLinksRight.map(link => (
+        {navLinks.map(link => (
           <li>
             <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
           </li>
@@ -69,21 +62,19 @@ const currentPath = Astro.url.pathname;
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-header">
       <a href="/" class="mobile-logo">
-        <img src="/images/logo-white.png" alt="J&C Asphalt" height="36" />
+        <img src="/images/logo-horizontal.png" alt="J&C Asphalt" height="36" />
       </a>
       <button class="mobile-close" id="mobile-close" aria-label="Close menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#F0F0F0" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#121212" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
     <ul>
-      {navLinksLeft.map(link => (
-        <li><a href={link.href}>{link.label}</a></li>
-      ))}
+      <li><a href="/">Home</a></li>
       <li class="mobile-section-label">Services</li>
       {services.map(s => (
         <li class="mobile-indent"><a href={s.href}>{s.label}</a></li>
       ))}
-      {navLinksRight.map(link => (
+      {navLinks.map(link => (
         <li><a href={link.href}>{link.label}</a></li>
       ))}
       <li class="mobile-cta"><a href="/contact" class="btn-primary">Get a Free Quote</a></li>
@@ -101,10 +92,10 @@ const currentPath = Astro.url.pathname;
   }
 
   .header-top {
-    background-color: #0A0A0A;
-    border-bottom: 1px solid #1A1A1A;
+    background-color: #F0F3F0;
+    border-bottom: 1px solid #D0D5D0;
     font-size: 0.75rem;
-    color: #888;
+    color: #666;
     padding: 0.4rem 0;
   }
 
@@ -115,7 +106,7 @@ const currentPath = Astro.url.pathname;
   }
 
   .header-top a {
-    color: #888;
+    color: #666;
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -125,8 +116,9 @@ const currentPath = Astro.url.pathname;
   }
 
   .main-nav {
-    background-color: #111111;
+    background-color: #ffffff;
     border-bottom: 2px solid #cd553f;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   }
 
   .nav-inner {
@@ -167,7 +159,7 @@ const currentPath = Astro.url.pathname;
     font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #F0F0F0;
+    color: #1a1a1a;
     text-decoration: none;
     padding: 0.5rem 0.75rem;
     transition: color 0.2s;
@@ -194,14 +186,15 @@ const currentPath = Astro.url.pathname;
     position: absolute;
     top: calc(100% + 0.5rem);
     left: 0;
-    background-color: #1A1A1A;
-    border: 1px solid #2A2A2A;
+    background-color: #ffffff;
+    border: 1px solid #D0D5D0;
     border-top: 2px solid #cd553f;
     list-style: none;
     padding: 0.5rem 0;
     margin: 0;
     min-width: 200px;
     z-index: 10;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   }
 
   .has-dropdown:hover .dropdown,
@@ -214,6 +207,11 @@ const currentPath = Astro.url.pathname;
     padding: 0.6rem 1rem;
     display: block;
     letter-spacing: 0.05em;
+    color: #1a1a1a;
+  }
+
+  .dropdown a:hover {
+    color: #cd553f;
   }
 
   .nav-cta {
@@ -237,7 +235,7 @@ const currentPath = Astro.url.pathname;
     display: block;
     width: 24px;
     height: 2px;
-    background-color: #F0F0F0;
+    background-color: #1a1a1a;
     transition: all 0.3s;
   }
 
@@ -248,7 +246,7 @@ const currentPath = Astro.url.pathname;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #111111;
+    background-color: #ffffff;
     z-index: 99;
     overflow-y: auto;
     padding: 0 2rem 2rem;
@@ -261,7 +259,7 @@ const currentPath = Astro.url.pathname;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
-    border-bottom: 1px solid #1A1A1A;
+    border-bottom: 1px solid #D0D5D0;
     margin-bottom: 1rem;
   }
 
@@ -276,7 +274,6 @@ const currentPath = Astro.url.pathname;
     border: none;
     cursor: pointer;
     padding: 0.25rem;
-    color: #F0F0F0;
     display: flex;
     align-items: center;
   }
@@ -297,11 +294,11 @@ const currentPath = Astro.url.pathname;
     font-weight: 400;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #F0F0F0;
+    color: #121212;
     text-decoration: none;
     display: block;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #1A1A1A;
+    border-bottom: 1px solid #D0D5D0;
     transition: color 0.2s;
   }
 
@@ -321,7 +318,7 @@ const currentPath = Astro.url.pathname;
   .mobile-indent a {
     font-size: 1.1rem;
     padding-left: 1rem;
-    color: #888;
+    color: #666;
   }
 
   .mobile-cta {

@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-jc-black: #0A0A0A;
-  --color-jc-dark: #111111;
-  --color-jc-mid: #1A1A1A;
-  --color-jc-card: #222222;
+  --color-jc-black: #DDE0DE;
+  --color-jc-dark: #FFFFFF;
+  --color-jc-mid: #F2F5F2;
+  --color-jc-card: #FFFFFF;
   --color-jc-red: #cd553f;
   --color-jc-red-dark: #a33d2a;
-  --color-jc-white: #F0F0F0;
-  --color-jc-muted: #888888;
-  --color-jc-border: #2A2A2A;
+  --color-jc-white: #121212;
+  --color-jc-muted: #666666;
+  --color-jc-border: #C8CEC8;
 
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-body: 'Barlow', sans-serif;
@@ -18,8 +18,8 @@
 @layer base {
   html {
     font-family: var(--font-body);
-    background-color: var(--color-jc-black);
-    color: var(--color-jc-white);
+    background-color: #DDE0DE;
+    color: #121212;
     scroll-behavior: smooth;
   }
 
@@ -37,7 +37,7 @@
   .btn-primary {
     display: inline-block;
     background-color: var(--color-jc-red);
-    color: #000;
+    color: #fff;
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -54,8 +54,8 @@
 
   .btn-outline {
     display: inline-block;
-    border: 2px solid var(--color-jc-white);
-    color: var(--color-jc-white);
+    border: 2px solid #121212;
+    color: #121212;
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -67,8 +67,8 @@
   }
 
   .btn-outline:hover {
-    background-color: var(--color-jc-white);
-    color: #000;
+    background-color: #121212;
+    color: #F0F0F0;
   }
 
   .btn-outline-red {
@@ -87,7 +87,7 @@
 
   .btn-outline-red:hover {
     background-color: var(--color-jc-red);
-    color: #000;
+    color: #fff;
   }
 
   .section-label {
@@ -106,12 +106,12 @@
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.1;
-    color: var(--color-jc-white);
+    color: #121212;
   }
 
   .page-hero {
     padding: 8rem 0 5rem;
-    background-color: var(--color-jc-dark);
+    background-color: #FFFFFF;
     position: relative;
     overflow: hidden;
   }
@@ -133,8 +133,8 @@
   }
 
   .service-card {
-    background-color: var(--color-jc-card);
-    border: 1px solid var(--color-jc-border);
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
     padding: 2rem;
     transition: border-color 0.2s ease, transform 0.2s ease;
     text-decoration: none;
