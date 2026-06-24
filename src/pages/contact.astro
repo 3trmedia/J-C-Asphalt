@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Get a Free Quote | J&C Asphalt | Utah Valley"
-  description="Request a free asphalt paving quote from J&C Asphalt. Serving Provo, Orem, Spanish Fork, Springville, Lehi, and all of Utah Valley."
+  title="Free Asphalt Paving Quote | J&C Asphalt | Orem, UT"
+  description="Get a free quote from J&C Asphalt, Orem's professional asphalt paving crew. Driveways, parking lots, and concrete work across Utah Valley. Most jobs done in a day."
 >
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -23,7 +23,14 @@ import Layout from '../layouts/Layout.astro';
         <!-- FORM -->
         <div class="form-col">
           <h2>Tell Us About Your Project</h2>
-          <form class="quote-form" name="quote" method="POST" netlify>
+          <div class="success-banner" id="success-banner" style="display:none">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#cd553f" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="#cd553f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Quote request received! We'll get back to you within 24 hours.</span>
+          </div>
+          <form class="quote-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="5e4ef25a-8b11-4e44-a0d9-a97b937c1dc8" />
+            <input type="hidden" name="subject" value="New Quote Request: J&C Asphalt" />
+            <input type="hidden" name="redirect" value="https://jcasphaltpaving.com/contact?success=true" />
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name">First Name *</label>
@@ -105,7 +112,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
                 <div>
                   <span class="info-label">Location</span>
-                  <span>Provo, Utah</span>
+                  <span>Orem, Utah</span>
                 </div>
               </div>
               <div class="info-item">
@@ -145,6 +152,13 @@ import Layout from '../layouts/Layout.astro';
   </section>
 </Layout>
 
+<script>
+  if (new URLSearchParams(window.location.search).get('success') === 'true') {
+    const banner = document.getElementById('success-banner');
+    if (banner) banner.style.display = 'flex';
+  }
+</script>
+
 <style>
   .page-hero {
     padding: 8rem 0 5rem;
@@ -174,6 +188,19 @@ import Layout from '../layouts/Layout.astro';
     grid-template-columns: 1.4fr 1fr;
     gap: 4rem;
     align-items: start;
+  }
+
+  .success-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(205, 85, 63, 0.08);
+    border: 1px solid rgba(205, 85, 63, 0.35);
+    border-left: 3px solid #cd553f;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #121212;
   }
 
   .form-col h2 {

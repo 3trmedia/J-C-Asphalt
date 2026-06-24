@@ -84,10 +84,14 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="section-title">Driveway Projects</h2>
       </div>
       <div class="mini-gallery">
-        {['/images/driveway-aerial-finished.jpg', '/images/paver-leeboy-side.jpg', '/images/aerial-drone-paving.jpg'].map((src, i) => (
+        {[
+          { src: '/images/driveway-aerial-finished.jpg', alt: 'Aerial view of completed curved residential driveway with tennis court and green landscaping' },
+          { src: '/images/paver-leeboy-side.jpg', alt: 'J&C Asphalt branded LeeBoy paver with crew working on a residential driveway' },
+          { src: '/images/aerial-drone-paving.jpg', alt: 'Aerial view of orange asphalt paver in a residential driveway in Utah Valley' },
+        ].map(({ src, alt }) => (
           <img
             src={src}
-            alt={`Residential driveway project ${i + 1} by J&C Asphalt`}
+            alt={alt}
             width="560"
             height="380"
             loading="lazy"

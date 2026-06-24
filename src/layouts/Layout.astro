@@ -7,12 +7,14 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
 }
 
 const {
   title,
   description = 'J&C Asphalt, Utah Valley\'s professional asphalt paving team. Full-crew driveway and parking lot installation serving Spanish Fork to Salt Lake City.',
-  ogImage = '/images/og-default.jpg'
+  ogImage = '/images/og-default.jpg',
+  ogType = 'website',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -30,7 +32,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={new URL(ogImage, Astro.site)} />
 
@@ -39,8 +41,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <!-- Favicon placeholder -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Geo meta -->
+    <meta name="geo.region" content="US-UT" />
+    <meta name="geo.placename" content="Orem, Utah" />
 
     <!-- Schema: Local Business -->
     <script type="application/ld+json">
@@ -48,17 +54,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "J&C Asphalt",
-        "image": "https://jcasphaltpaving.com/images/og-default.jpg",
+        "image": "https://jcasphaltpaving.com/images/paver-ground-shot.jpg",
         "telephone": "+14354064640",
         "email": "jcasphalt.contracting@gmail.com",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Provo",
+          "addressLocality": "Orem",
           "addressRegion": "UT",
+          "postalCode": "84097",
           "addressCountry": "US"
         },
         "openingHours": "Mo-Fr 09:00-18:00",
-        "areaServed": ["Provo", "Orem", "Spanish Fork", "Springville", "Payson", "Lehi", "American Fork", "Pleasant Grove", "Lindon", "Mapleton", "Salem", "Santaquin"],
+        "areaServed": [
+          "Orem", "Provo", "Spanish Fork", "Springville", "Payson", "Lehi",
+          "American Fork", "Pleasant Grove", "Lindon", "Mapleton", "Salem",
+          "Santaquin", "Vineyard", "Eagle Mountain",
+          "Salt Lake City", "Murray", "Sandy", "Draper", "Herriman", "Riverton", "South Jordan"
+        ],
         "priceRange": "$$",
         "url": "https://jcasphaltpaving.com"
       }

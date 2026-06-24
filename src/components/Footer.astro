@@ -44,7 +44,7 @@ const cities = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi'
           <div class="footer-contact">
             <a href="tel:+14354064640">(435) 406-4640</a>
             <a href="mailto:jcasphalt.contracting@gmail.com">jcasphalt.contracting@gmail.com</a>
-            <span>Provo, Utah</span>
+            <span>Orem, Utah</span>
             <span>Mon–Fri &nbsp;|&nbsp; 9AM – 6PM</span>
           </div>
         </div>
@@ -77,7 +77,11 @@ const cities = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi'
   <div class="footer-bottom">
     <div class="container">
       <span>&copy; {new Date().getFullYear()} J&amp;C Asphalt. All Rights Reserved.</span>
-      <a href="/privacy-policy">Privacy Policy</a>
+      <div class="footer-bottom-right">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <span class="footer-divider">|</span>
+        <span>Built by <a href="https://3trmedia.com" target="_blank" rel="noopener">3TR Media</a></span>
+      </div>
     </div>
   </div>
 </footer>
@@ -215,6 +219,16 @@ const cities = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi'
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+
+  .footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-divider {
+    color: #ccc;
   }
 
   .footer-bottom span,

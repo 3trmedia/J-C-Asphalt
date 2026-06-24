@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Concrete Work | J&C Asphalt | Utah Valley"
-  description="Concrete curbs, gutters, sidewalks, and flatwork throughout Utah Valley. J&C Asphalt handles concrete work as part of complete paving projects."
+  title="Concrete Curbs & Flatwork | J&C Asphalt | Utah Valley"
+  description="Concrete curbs, gutters, sidewalks, and flatwork throughout Utah Valley. J&C Asphalt handles asphalt and concrete in one project, one crew, one invoice."
 >
   <section class="service-hero">
     <div class="container">
@@ -78,10 +78,14 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="section-title">Concrete Projects</h2>
       </div>
       <div class="mini-gallery">
-        {['/images/concrete-finished.jpg', '/images/concrete-working.jpg', '/images/crew-asphalt-work.jpg'].map((src, i) => (
+        {[
+          { src: '/images/concrete-finished.jpg', alt: 'Finished concrete curb and gutter work on a Utah Valley residential project' },
+          { src: '/images/concrete-working.jpg', alt: 'Concrete curb and gutter installation in progress by J&C Asphalt crew' },
+          { src: '/images/crew-asphalt-work.jpg', alt: 'J&C Asphalt crew spreading asphalt on a commercial paving project in Utah Valley' },
+        ].map(({ src, alt }) => (
           <img
             src={src}
-            alt={`Concrete project ${i + 1} by J&C Asphalt`}
+            alt={alt}
             width="560"
             height="380"
             loading="lazy"

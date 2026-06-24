@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Parking Lot Paving | J&C Asphalt | Utah Valley Commercial Paving"
-  description="Commercial and HOA parking lot paving throughout Utah Valley. J&C Asphalt handles large-scale paving projects with a full professional crew and industrial equipment."
+  title="Parking Lot Paving | J&C Asphalt | Utah Valley"
+  description="Commercial and HOA parking lot paving throughout Utah Valley. J&C Asphalt brings a full crew and industrial equipment to handle large-scale lots fast. Free quotes."
 >
   <section class="service-hero">
     <div class="container">
@@ -79,10 +79,14 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="section-title">Parking Lot Projects</h2>
       </div>
       <div class="mini-gallery">
-        {['/images/roller-on-fresh-asphalt.jpg', '/images/aerial-paver-top.jpg', '/images/crew-asphalt-raking.jpg'].map((src, i) => (
+        {[
+          { src: '/images/roller-on-fresh-asphalt.jpg', alt: 'Yellow CAT roller compacting fresh asphalt on a commercial parking lot in Utah Valley' },
+          { src: '/images/aerial-paver-top.jpg', alt: 'Top-down aerial view of J&C Asphalt paver and crew laying asphalt on a large commercial lot' },
+          { src: '/images/crew-asphalt-raking.jpg', alt: 'J&C Asphalt crew member in orange overalls raking fresh asphalt on a parking lot project' },
+        ].map(({ src, alt }) => (
           <img
             src={src}
-            alt={`Commercial parking lot project ${i + 1} by J&C Asphalt`}
+            alt={alt}
             width="560"
             height="380"
             loading="lazy"
