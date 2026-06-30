@@ -57,31 +57,76 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="geo.region" content="US-UT" />
     <meta name="geo.placename" content="Orem, Utah" />
 
-    <!-- Schema: Local Business -->
+    <!-- Schema: HomeAndConstructionBusiness -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "HomeAndConstructionBusiness",
         "name": "J&C Asphalt",
         "image": "https://jcasphaltpaving.com/images/paver-ground-shot.jpg",
         "telephone": "+14354064640",
         "email": "jcasphalt.contracting@gmail.com",
+        "url": "https://jcasphaltpaving.com",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "574 E 1400 S",
           "addressLocality": "Orem",
           "addressRegion": "UT",
           "postalCode": "84097",
           "addressCountry": "US"
         },
-        "openingHours": "Mo-Fr 09:00-18:00",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
         "areaServed": [
-          "Orem", "Provo", "Spanish Fork", "Springville", "Payson", "Lehi",
-          "American Fork", "Pleasant Grove", "Lindon", "Mapleton", "Salem",
-          "Santaquin", "Vineyard", "Eagle Mountain",
-          "Salt Lake City", "Murray", "Sandy", "Draper", "Herriman", "Riverton", "South Jordan"
+          {"@type": "City", "name": "Orem"},
+          {"@type": "City", "name": "Provo"},
+          {"@type": "City", "name": "Spanish Fork"},
+          {"@type": "City", "name": "Springville"},
+          {"@type": "City", "name": "Payson"},
+          {"@type": "City", "name": "Lehi"},
+          {"@type": "City", "name": "American Fork"},
+          {"@type": "City", "name": "Pleasant Grove"},
+          {"@type": "City", "name": "Lindon"},
+          {"@type": "City", "name": "Mapleton"},
+          {"@type": "City", "name": "Salem"},
+          {"@type": "City", "name": "Santaquin"},
+          {"@type": "City", "name": "Vineyard"},
+          {"@type": "City", "name": "Eagle Mountain"}
         ],
         "priceRange": "$$",
-        "url": "https://jcasphaltpaving.com"
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.2",
+          "reviewCount": "5"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Asphalt and Paving Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {"@type": "Service", "name": "Asphalt Paving"}
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {"@type": "Service", "name": "Residential Driveways"}
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {"@type": "Service", "name": "Parking Lots"}
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {"@type": "Service", "name": "Concrete Work"}
+            }
+          ]
+        }
       }
     </script>
 
