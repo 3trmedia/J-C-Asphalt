@@ -25,6 +25,7 @@ import Layout from '../../layouts/Layout.astro';
           <span class="section-label">Concrete Services</span>
           <h2 class="section-title">One Crew. Both Materials.</h2>
           <p>Many asphalt jobs also require concrete work: curbs, gutters, borders, or aprons. Rather than coordinating two separate contractors, J&amp;C Asphalt handles both, keeping your project on one timeline and one invoice.</p>
+          <p>Concrete and asphalt fail differently under Utah's climate. Asphalt flexes with temperature swings, while concrete is rigid and relies on properly placed control joints to manage cracking as it expands and contracts through freeze-thaw cycles. Handling both under one crew means the transition between the two materials, at a driveway apron or a curb line, is planned as one job instead of two separate contractors guessing at how their work will meet in the middle.</p>
           <ul class="service-list">
             <li>Concrete curbs and gutters</li>
             <li>Sidewalks and walkways</li>
@@ -72,6 +73,82 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Curb &amp; Gutter Process</span>
+        <h2 class="section-title">How We Install Concrete Curb &amp; Gutter</h2>
+        <p class="section-sub">Curb and gutter isn't just decorative. It manages stormwater runoff, protects the edge of your asphalt or lawn, and defines the boundary of a driveway or parking lot. We install it the same way whether it's a small residential job or a full commercial site.</p>
+      </div>
+      <div class="process-grid">
+        {[
+          { step: '1', title: 'Layout & Grading', desc: 'We establish the correct line and grade so water drains where it\'s supposed to instead of pooling against your foundation or asphalt.' },
+          { step: '2', title: 'Forming', desc: 'Forms are set to the exact curb and gutter profile your project needs, whether that\'s a standard roll curb, vertical curb, or a custom flatwork edge.' },
+          { step: '3', title: 'Pouring & Finishing', desc: 'Concrete is poured, screeded, and finished for a clean, durable surface that holds up to Utah\'s freeze-thaw cycles.' },
+          { step: '4', title: 'Curing & Backfill', desc: 'We protect the fresh concrete through its cure window, then backfill and grade the surrounding area so the transition looks finished, not patched together.' },
+        ].map(p => (
+          <div class="process-card">
+            <span class="process-step">{p.step}</span>
+            <h3>{p.title}</h3>
+            <p>{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Municipal &amp; HOA Context</span>
+        <h2 class="section-title">Why Curb &amp; Gutter Matters in Utah Cities</h2>
+      </div>
+      <div class="neighborhoods-text">
+        <p>Many Utah Valley cities and HOAs require concrete curb and gutter along streets and at driveway approaches as part of site plan approval, particularly in newer subdivisions where stormwater drainage has to be engineered rather than left to natural runoff. If you're building a new driveway, adding a parking area, or updating an older property to meet current standards, curb and gutter is often part of what gets reviewed.</p>
+        <p>We coordinate the layout of new curb and gutter work with your property's existing drainage, so water is directed away from structures and asphalt edges rather than left to erode them. For HOA common areas and commercial sites, we can also match existing curb profiles so new work blends in with what's already there instead of looking like an obvious patch.</p>
+      </div>
+      <div class="faq-grid" style="margin-top: 2.5rem;">
+        {[
+          { q: 'Do I need a permit for new curb and gutter?', a: 'It depends on the city and whether the work touches the public right-of-way. We\'ll flag it during your quote if your project looks like it needs city approval, so there are no surprises mid-job.' },
+          { q: 'Can you match existing curb and gutter on my street?', a: 'In most cases, yes. We\'ll look at the existing profile and grade during your quote and match it so your new section ties in cleanly instead of standing out.' },
+        ].map(item => (
+          <div class="faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Repair or Replace?</span>
+        <h2 class="section-title">Reading the Damage</h2>
+      </div>
+      <div class="repair-grid">
+        <div class="repair-card">
+          <h3>Usually a Repair</h3>
+          <ul class="service-list">
+            <li>Minor surface spalling or scaling</li>
+            <li>Small hairline cracks with no movement</li>
+            <li>Localized chipping at an edge or corner</li>
+          </ul>
+        </div>
+        <div class="repair-card">
+          <h3>Usually a Replacement</h3>
+          <ul class="service-list">
+            <li>Sections heaved or sunk out of grade</li>
+            <li>Gutter no longer carrying water correctly</li>
+            <li>Cracking wide enough to let water and roots underneath</li>
+          </ul>
+        </div>
+      </div>
+      <p class="repair-note">We'll give you an honest read on which category your project falls into during your free quote, rather than defaulting to the more expensive option.</p>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Recent Work</span>
@@ -180,6 +257,125 @@ import Layout from '../../layouts/Layout.astro';
 
   .mini-gallery img { width: 100%; height: 380px; object-fit: cover; object-position: center; display: block; }
 
+  .section-sub {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0.75rem;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .process-card {
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    padding: 1.75rem;
+    text-align: center;
+  }
+
+  .process-step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #cd553f;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .process-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #121212;
+    margin-bottom: 0.6rem;
+  }
+
+  .process-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .neighborhoods-text {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .neighborhoods-text p { color: #666; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.25rem; }
+
+  .repair-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .repair-card {
+    padding: 1.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    border-left: 3px solid #cd553f;
+  }
+
+  .repair-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #121212;
+    margin-bottom: 0.9rem;
+  }
+
+  .repair-note {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 2rem auto 0;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    border-left: 3px solid #cd553f;
+  }
+
+  .faq-item h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #121212;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.65;
+    margin: 0;
+  }
+
   .service-cta {
     background-color: #cd553f;
     padding: 5rem 0;
@@ -207,9 +403,13 @@ import Layout from '../../layouts/Layout.astro';
   @media (max-width: 900px) {
     .overview-inner, .combo-callout { grid-template-columns: 1fr; gap: 3rem; }
     .mini-gallery { grid-template-columns: 1fr 1fr; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .repair-grid { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 580px) {
     .mini-gallery { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
   }
 </style>
