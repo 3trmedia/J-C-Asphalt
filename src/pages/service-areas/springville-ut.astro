@@ -1,0 +1,257 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  { q: 'Do you serve the older neighborhoods near downtown Springville?', a: 'Yes. A lot of our Springville work is in the established, tree-lined neighborhoods near downtown and the Springville Museum of Art, where original driveways are old enough to need replacement.' },
+  { q: 'Do you pave near Hobble Creek Canyon?', a: 'We serve residential properties on the Springville side heading toward Hobble Creek Canyon. Give us a call with your address and we\'ll confirm we can get equipment in.' },
+  { q: 'How does Springville\'s climate affect asphalt?', a: 'Springville sees the same freeze-thaw winters and hot, dry summers as the rest of Utah Valley. Combined with tree roots common in older, established neighborhoods, that\'s a common cause of the cracking and heaving we see on older Springville driveways.' },
+  { q: 'Do you serve the newer subdivisions further from downtown?', a: 'Yes. Springville has newer development spreading east and south away from the historic core, and we handle new driveway installation for those properties in addition to replacement work downtown.' },
+];
+---
+
+<Layout
+  title="Asphalt Paving in Springville, UT | J&C Asphalt"
+  description="Residential driveway and parking lot paving in Springville, UT. J&C Asphalt brings a full crew to Art City neighborhoods. Free quotes."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Springville, UT</span>
+      <h1 class="section-title">Asphalt Paving in Springville, UT</h1>
+      <p>Springville, known locally as Art City for the Springville Museum of Art anchoring its downtown, is one of Utah Valley's older, more established communities. Many of its neighborhoods were built decades ago under mature tree canopies, which means a lot of driveways here are dealing with root intrusion and age-related cracking on top of Utah's demanding freeze-thaw climate.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="/work" class="btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="area-overview">
+        <div class="area-image">
+          <img
+            src="/images/driveway-aerial-finished.jpg"
+            alt="Completed asphalt driveway paving project near Springville, UT"
+            width="640"
+            height="520"
+            loading="lazy"
+          />
+        </div>
+        <div class="area-text">
+          <span class="section-label">Local Conditions</span>
+          <h2 class="section-title">Older Neighborhoods, Real Wear</h2>
+          <p>Springville sits just south of Provo, bordered by Mapleton to the southeast toward the mouth of Hobble Creek Canyon, and Spanish Fork to the south. Its downtown core, centered around the Museum of Art and Main Street, is surrounded by some of Utah Valley's older residential streets, many lined with large, mature trees planted decades ago.</p>
+          <p>That maturity is part of what gives Springville its character, but it also means root systems have had a long time to work under driveways and sidewalks, contributing to the heaving and cracking we see on a lot of older asphalt here. Combine that with Utah's freeze-thaw winter cycle and dry summer heat, and older Springville driveways are frequently at or past the point where patching stops being a real fix.</p>
+          <p>We handle full removal and replacement for driveways in that condition, as well as new paving for Springville's newer subdivisions further from downtown.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Services in Springville</span>
+        <h2 class="section-title">What We Offer</h2>
+      </div>
+      <div class="service-links-grid">
+        <a href="/services/driveways" class="service-link-card">
+          <h3>Residential Driveways</h3>
+          <p>Full replacement for aging asphalt, including root damage repair.</p>
+        </a>
+        <a href="/services/parking-lots" class="service-link-card">
+          <h3>Parking Lots</h3>
+          <p>Paving for churches, HOAs, and small commercial properties.</p>
+        </a>
+        <a href="/services/concrete" class="service-link-card">
+          <h3>Concrete Work</h3>
+          <p>Curb and sidewalk replacement alongside driveway projects.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Art City</span>
+        <h2 class="section-title">Downtown vs. the Newer Edges of Springville</h2>
+      </div>
+      <div class="neighborhoods-text">
+        <p>Springville's identity is really split in two. The historic core around Main Street and the Museum of Art has some of the oldest, most established tree canopy in Utah Valley, and the driveways underneath those trees are frequently original to homes built decades ago. Root intrusion, heaving, and long-cured surface cracking are the norm there, not the exception.</p>
+        <p>Further out, especially toward Mapleton and the benches closer to Hobble Creek Canyon, development is newer and the ground hasn't had the same decades of root growth working underneath it. That's where we do more new installation work: fresh driveways on recently built or renovated properties, without the tree-root complications that come with the older part of town.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Springville Paving FAQ</h2>
+      </div>
+      <div class="faq-grid">
+        {faqs.map(item => (
+          <div class="faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="area-bottom-cta">
+    <div class="container">
+      <h2>Ready for Your Springville Project?</h2>
+      <p>Get a free quote and we'll follow up within 24 hours to schedule a look at your property.</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:+14354064640" class="btn-outline-red">Call (435) 406-4640</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .page-hero p { color: #666; font-size: 1.05rem; line-height: 1.75; max-width: 700px; }
+
+  .section-pad { padding: 5rem 0; }
+  .section-dark { background-color: #F2F5F2; }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+  }
+
+  .area-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .area-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .area-text h2 { margin: 0.5rem 0 1rem; }
+  .area-text p { color: #666; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+
+  .neighborhoods-text {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .neighborhoods-text p { color: #666; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.25rem; }
+
+  .service-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-link-card {
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    padding: 1.75rem;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .service-link-card:hover {
+    border-color: #cd553f;
+    transform: translateY(-4px);
+  }
+
+  .service-link-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #121212;
+    margin-bottom: 0.6rem;
+  }
+
+  .service-link-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    padding: 1.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    border-left: 3px solid #cd553f;
+  }
+
+  .faq-item h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #121212;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .area-bottom-cta {
+    background-color: #cd553f;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .area-bottom-cta h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.75rem;
+  }
+
+  .area-bottom-cta p {
+    color: rgba(0,0,0,0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .area-bottom-cta .btn-outline-red { border-color: #000; color: #000; }
+  .area-bottom-cta .btn-outline-red:hover { background-color: #000; color: #cd553f; }
+
+  @media (max-width: 900px) {
+    .area-overview { grid-template-columns: 1fr; gap: 3rem; }
+    .service-links-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 580px) {
+    .service-links-grid { grid-template-columns: 1fr; }
+  }
+</style>

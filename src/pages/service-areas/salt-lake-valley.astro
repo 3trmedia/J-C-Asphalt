@@ -1,0 +1,289 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const cities = ['Murray', 'Sandy', 'Draper', 'West Jordan', 'West Valley City'];
+
+const faqs = [
+  { q: 'Are you fully established in the Salt Lake Valley yet?', a: 'We\'re expanding into the Salt Lake Valley from our home base in Utah Valley, and currently accepting select residential and commercial projects in Murray, Sandy, Draper, West Jordan, and West Valley City. Call to confirm we can take on your specific project and timeline.' },
+  { q: 'Do you handle large commercial and warehouse lots?', a: 'Yes. West Valley City and West Jordan in particular have a lot of industrial and warehouse space, and commercial parking lot paving, striping, and maintenance is a core part of what we do there.' },
+  { q: 'Can you travel from Utah County for a Salt Lake Valley job?', a: 'Yes. Draper, Sandy, and Murray sit just across the Point of the Mountain from our Utah County service area, an easy stretch up I-15 for our crew and equipment.' },
+  { q: 'Do you work with property management companies?', a: 'Yes. Multi-tenant retail centers and office parks across Murray, Sandy, and West Jordan are common clients for us, and we can coordinate paving and maintenance work around tenant schedules rather than disrupting a full property at once.' },
+];
+---
+
+<Layout
+  title="Parking Lot Paving | Salt Lake Valley | J&C Asphalt"
+  description="J&C Asphalt is expanding into Murray, Sandy, Draper, West Jordan, and West Valley City. Commercial parking lot paving and residential driveways. Free quotes."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Salt Lake Valley Expansion</span>
+      <h1 class="section-title">Parking Lot Paving in the Salt Lake Valley</h1>
+      <p>J&amp;C Asphalt is expanding north from our Utah County home base into the southern Salt Lake Valley, currently taking on projects in Murray, Sandy, Draper, West Jordan, and West Valley City. This corner of the valley carries a lot of retail, office, and warehouse density, which makes commercial parking lot paving, striping, and maintenance the biggest opportunity for our crew here, alongside residential driveway work.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Get a Commercial Quote</a>
+        <a href="/work" class="btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="area-overview">
+        <div class="area-image">
+          <img
+            src="/images/parking-completed.jpg"
+            alt="Completed commercial parking lot paving project"
+            width="640"
+            height="520"
+            loading="lazy"
+          />
+        </div>
+        <div class="area-text">
+          <span class="section-label">Why This Market</span>
+          <h2 class="section-title">Commercial Density Across Five Cities</h2>
+          <p>Murray sits near the geographic center of Salt Lake Valley, anchored by dense retail and medical office development. Sandy carries a similar mix of big-box retail and sports and entertainment venues to its south. Draper straddles the Point of the Mountain at the valley's south end, home to a growing corporate and tech office corridor. West Jordan and West Valley City, further west, carry some of the valley's heaviest concentration of large retail centers, distribution facilities, and industrial warehouse space.</p>
+          <p>That mix of property types is exactly where full-crew commercial paving matters most. Large lots need to be resurfaced or newly installed quickly to avoid disrupting business operations, and striping and ADA-compliant markings need to hold up under heavy daily traffic.</p>
+          <p>We're building our Salt Lake Valley presence around that kind of commercial work first, while still taking on residential driveway projects across all five cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Currently Serving</span>
+        <h2 class="section-title">Salt Lake Valley Cities</h2>
+      </div>
+      <div class="cities-pill-grid">
+        {cities.map(city => (
+          <div class="city-pill">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#cd553f" opacity="0.25"/><circle cx="5" cy="5" r="2.5" fill="#cd553f"/></svg>
+            {city}, UT
+          </div>
+        ))}
+      </div>
+      <div class="service-links-grid">
+        <a href="/services/parking-lots" class="service-link-card">
+          <h3>Commercial Parking Lots</h3>
+          <p>New installation, overlays, and striping for retail, warehouse, and office properties.</p>
+        </a>
+        <a href="/services/driveways" class="service-link-card">
+          <h3>Residential Driveways</h3>
+          <p>Full-crew driveway paving for homeowners across all five cities.</p>
+        </a>
+        <a href="/services/concrete" class="service-link-card">
+          <h3>Concrete Work</h3>
+          <p>Curbs and flatwork paired with commercial or residential paving projects.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Getting Started Here</span>
+        <h2 class="section-title">What Expansion Looks Like Right Now</h2>
+      </div>
+      <div class="neighborhoods-text">
+        <p>We're not trying to be everywhere in the Salt Lake Valley on day one. Our approach is to take on projects in Murray, Sandy, Draper, West Jordan, and West Valley City where our Utah County crew can travel up I-15, across the Point of the Mountain, without stretching our schedule thin. That usually means we're most competitive on larger commercial jobs, where one full-crew visit covers a lot of square footage, and on residential projects that fit naturally around our Utah Valley scheduling.</p>
+        <p>As we take on more work in these five cities, we'll expand further into the valley. For now, the fastest way to know if we can fit your project is to call with your city and scope, and we'll give you a straight answer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Salt Lake Valley FAQ</h2>
+      </div>
+      <div class="faq-grid">
+        {faqs.map(item => (
+          <div class="faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="area-bottom-cta">
+    <div class="container">
+      <h2>Get a Salt Lake Valley Quote</h2>
+      <p>Tell us your city and project scope and we'll confirm availability, usually within 24 hours.</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:+14354064640" class="btn-outline-red">Call (435) 406-4640</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+  .page-hero p { color: #666; font-size: 1.05rem; line-height: 1.75; max-width: 740px; }
+
+  .section-pad { padding: 5rem 0; }
+  .section-dark { background-color: #F2F5F2; }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+  }
+
+  .area-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .area-image img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .area-text h2 { margin: 0.5rem 0 1rem; }
+  .area-text p { color: #666; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+
+  .neighborhoods-text {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .neighborhoods-text p { color: #666; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.25rem; }
+
+  .cities-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .city-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    padding: 0.5rem 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: #444;
+    text-transform: uppercase;
+  }
+
+  .service-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-link-card {
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    padding: 1.75rem;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .service-link-card:hover {
+    border-color: #cd553f;
+    transform: translateY(-4px);
+  }
+
+  .service-link-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #121212;
+    margin-bottom: 0.6rem;
+  }
+
+  .service-link-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    padding: 1.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    border-left: 3px solid #cd553f;
+  }
+
+  .faq-item h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #121212;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .area-bottom-cta {
+    background-color: #cd553f;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .area-bottom-cta h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.75rem;
+  }
+
+  .area-bottom-cta p {
+    color: rgba(0,0,0,0.7);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .area-bottom-cta .btn-outline-red { border-color: #000; color: #000; }
+  .area-bottom-cta .btn-outline-red:hover { background-color: #000; color: #cd553f; }
+
+  @media (max-width: 900px) {
+    .area-overview { grid-template-columns: 1fr; gap: 3rem; }
+    .service-links-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 580px) {
+    .service-links-grid { grid-template-columns: 1fr; }
+  }
+</style>

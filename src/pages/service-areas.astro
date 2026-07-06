@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 
 const utahValleyCities = [
-  { name: 'Orem', desc: 'Our home base. Full paving, driveway, and concrete services throughout Orem.' },
+  { name: 'Orem', desc: 'Our home base. Full paving, driveway, and concrete services throughout Orem.', href: '/service-areas/orem-ut' },
   { name: 'Provo', desc: 'A primary service area. We serve all of Provo and surrounding neighborhoods.' },
-  { name: 'Spanish Fork', desc: 'Serving residential and commercial clients in Spanish Fork.' },
-  { name: 'Springville', desc: 'Driveway and parking lot paving across Springville.' },
+  { name: 'Spanish Fork', desc: 'Serving residential and commercial clients in Spanish Fork.', href: '/service-areas/spanish-fork-ut' },
+  { name: 'Springville', desc: 'Driveway and parking lot paving across Springville.', href: '/service-areas/springville-ut' },
   { name: 'Payson', desc: 'Asphalt and concrete services in Payson and nearby areas.' },
   { name: 'Lehi', desc: 'Growing fast. We serve all of Lehi\'s new and established neighborhoods.' },
   { name: 'American Fork', desc: 'Residential and commercial paving throughout American Fork.' },
@@ -81,16 +81,27 @@ const slcCities = [
         <span class="section-label">Primary Service Area</span>
         <h2 class="section-title">Utah Valley</h2>
         <p class="section-sub">Our home market. We know every neighborhood and can typically schedule projects with faster turnaround times here.</p>
+        <a href="/service-areas/utah-county" class="btn-outline-red" style="margin-top: 1.5rem; display: inline-block;">See the Utah County Overview &rarr;</a>
       </div>
       <div class="cities-grid">
         {utahValleyCities.map(city => (
-          <div class="city-card">
-            <div class="city-dot"></div>
-            <div>
-              <strong>{city.name}, UT</strong>
-              <p>{city.desc}</p>
+          city.href ? (
+            <a href={city.href} class="city-card city-card-link">
+              <div class="city-dot"></div>
+              <div>
+                <strong>{city.name}, UT</strong>
+                <p>{city.desc}</p>
+              </div>
+            </a>
+          ) : (
+            <div class="city-card">
+              <div class="city-dot"></div>
+              <div>
+                <strong>{city.name}, UT</strong>
+                <p>{city.desc}</p>
+              </div>
             </div>
-          </div>
+          )
         ))}
       </div>
     </div>
@@ -112,6 +123,7 @@ const slcCities = [
               </div>
             ))}
           </div>
+          <a href="/service-areas/salt-lake-valley" class="btn-outline-red" style="margin-top: 1.5rem; display: inline-block;">See Salt Lake Valley Services &rarr;</a>
         </div>
         <div class="slc-cta">
           <div class="slc-cta-card">
@@ -248,6 +260,11 @@ const slcCities = [
 
   .city-card:hover {
     border-color: #cd553f;
+  }
+
+  .city-card-link {
+    text-decoration: none;
+    color: inherit;
   }
 
   .city-dot {

@@ -1,0 +1,16 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.jcasphaltpaving.com"
+        }
+      ],
+      "destination": "https://jcasphaltpaving.com/:path*",
+      "permanent": true
+    }
+  ]
+}
