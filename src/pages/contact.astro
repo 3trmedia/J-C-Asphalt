@@ -153,9 +153,16 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <script>
-  if (new URLSearchParams(window.location.search).get('success') === 'true') {
+  import { trackEvent } from '../lib/analytics.js';
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('success') === 'true') {
     const banner = document.getElementById('success-banner');
     if (banner) banner.style.display = 'flex';
+    trackEvent('generate_lead', { form_location: window.location.pathname });
+    params.delete('success');
+    const query = params.toString();
+    window.history.replaceState({}, '', window.location.pathname + (query ? `?${query}` : ''));
   }
 </script>
 
