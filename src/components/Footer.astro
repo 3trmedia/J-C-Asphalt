@@ -25,9 +25,12 @@ const cities = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi'
           <h2>Your Project. Done Right. Done Fast.</h2>
           <p>Text us today or fill out a quote request and we'll get back to you within 24 hours.</p>
         </div>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn-primary">Get a Free Quote</a>
-          <a href="sms:+18019414398" class="btn-outline-red">Text (801) 941-4398</a>
+        <div class="cta-buttons-wrap">
+          <div class="cta-buttons">
+            <a href="/contact" class="btn-primary">Get a Free Quote</a>
+            <a href="sms:+18019414398" class="btn-outline-red">Text (801) 941-4398</a>
+          </div>
+          <p class="sms-disclosure">By texting, you agree to receive SMS from J&C Asphalt. Msg frequency varies (up to ~6 msgs/mo). Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our <a href="/terms-and-conditions">Terms &amp; Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>
         </div>
       </div>
     </div>
@@ -123,11 +126,36 @@ const cities = ['Provo', 'Orem', 'Spanish Fork', 'Springville', 'Payson', 'Lehi'
     max-width: 500px;
   }
 
+  .cta-buttons-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+
   .cta-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     flex-shrink: 0;
+  }
+
+  .sms-disclosure {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #999;
+    max-width: 380px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .sms-disclosure a {
+    color: #999;
+    text-decoration: underline;
+  }
+
+  .sms-disclosure a:hover {
+    color: #cd553f;
   }
 
   .footer-main {
