@@ -224,11 +224,15 @@ const currentPath = Astro.url.pathname;
   .hamburger {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.25rem;
+    padding: 0;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .hamburger span {
@@ -247,7 +251,7 @@ const currentPath = Astro.url.pathname;
     right: 0;
     bottom: 0;
     background-color: #ffffff;
-    z-index: 99;
+    z-index: 101;
     overflow-y: auto;
     padding: 0 2rem 2rem;
     transform: translateX(100%);
@@ -273,9 +277,13 @@ const currentPath = Astro.url.pathname;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.25rem;
+    padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    margin-right: -0.5rem;
   }
 
   .mobile-menu.open {
@@ -335,6 +343,10 @@ const currentPath = Astro.url.pathname;
       display: none;
     }
 
+    .nav-cta {
+      margin-left: auto;
+    }
+
     .hamburger {
       display: flex;
     }
@@ -345,6 +357,14 @@ const currentPath = Astro.url.pathname;
 
     .btn-primary {
       display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-top .container {
+      flex-direction: column;
+      gap: 0.2rem;
+      text-align: center;
     }
   }
 </style>
@@ -358,12 +378,14 @@ const currentPath = Astro.url.pathname;
     mobileMenu?.classList.add('open');
     hamburger?.setAttribute('aria-expanded', 'true');
     mobileMenu?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     mobileMenu?.classList.remove('open');
     hamburger?.setAttribute('aria-expanded', 'false');
     mobileMenu?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   hamburger?.addEventListener('click', () => {
