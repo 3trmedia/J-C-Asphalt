@@ -142,9 +142,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       import { trackEvent } from '../lib/analytics.js';
 
       document.addEventListener('click', (event) => {
-        const link = event.target?.closest?.('a[href^="tel:"]');
-        if (!link) return;
-        trackEvent('phone_call_click', { link_location: window.location.pathname });
+        const telLink = event.target?.closest?.('a[href^="tel:"]');
+        if (telLink) {
+          trackEvent('phone_call_click', { link_location: window.location.pathname });
+          return;
+        }
+
+        const smsLink = event.target?.closest?.('a[href^="sms:"]');
+        if (smsLink) {
+          trackEvent('sms_click', { link_location: window.location.pathname });
+        }
       });
     </script>
   </body>
