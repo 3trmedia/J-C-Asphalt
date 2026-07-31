@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://jcasphaltpaving.com',
+  site: 'https://www.jcasphaltpaving.com',
   trailingSlash: 'never',
   integrations: [sitemap()],
   vite: {

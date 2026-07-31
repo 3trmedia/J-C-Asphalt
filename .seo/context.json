@@ -1,0 +1,39 @@
+{
+  "brand_name": "J&C Asphalt",
+  "primary_city": "Orem, UT",
+  "service_area_cities": [
+    "Orem", "Provo", "Spanish Fork", "Springville", "Payson", "Lehi",
+    "American Fork", "Pleasant Grove", "Lindon", "Mapleton", "Salem",
+    "Santaquin", "Vineyard", "Eagle Mountain", "Salt Lake Valley",
+    "Salt Lake City", "West Valley City", "West Jordan", "Murray",
+    "Taylorsville", "Cottonwood Heights", "Millcreek", "Bluffdale",
+    "Daybreak", "Draper", "Sandy", "Holladay"
+  ],
+  "services_offered": [
+    "Asphalt Paving", "Residential Driveways", "Parking Lot Paving & Maintenance",
+    "Concrete Curb & Gutter / Flatwork", "Seal Coating & Line Striping"
+  ],
+  "gsc_property": "https://jcasphaltpaving.com (also indexed under www.jcasphaltpaving.com — see technical findings)",
+  "canonical_domain_intended": "www.jcasphaltpaving.com",
+  "nap": {
+    "phone_sms": "+13854409882",
+    "phone_display": "(385) 440-9882",
+    "email": "jcasphalt.contracting@gmail.com",
+    "address": {
+      "streetAddress": "574 E 1400 S",
+      "addressLocality": "Orem",
+      "addressRegion": "UT",
+      "postalCode": "84097",
+      "addressCountry": "US"
+    }
+  },
+  "priority_target_queries": [
+    "paving contractor orem",
+    "parking lot paving [city], utah (multi-city long-tail cluster)",
+    "asphalt driveway [city] ut",
+    "utah county asphalt",
+    "concrete curb and gutter installation utah"
+  ],
+  "competitors": "not yet established — no competitor list provided; deferred",
+  "notes": "Site is Astro 5 + Tailwind v4, deployed on Vercel, 16 pages. This context.json was assembled from the repo (Layout.astro schema block, Nav.astro service list, astro.config.mjs) and prior session memory rather than a live interview, per auto-mode. Confirm priority_target_queries and competitors with Ben on the next cycle."
+}
