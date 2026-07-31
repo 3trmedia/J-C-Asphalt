@@ -1,0 +1,395 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const process = [
+  { step: '01', title: 'Free Estimate', desc: 'We assess your surface, measure square footage, and provide a detailed written quote at no charge.' },
+  { step: '02', title: 'Crack Repair', desc: 'Cracks and joints are cleaned and filled first so the sealant bonds properly and water can\'t get underneath.' },
+  { step: '03', title: 'Seal Coat Application', desc: 'We apply a professional-grade seal coat evenly across the full surface using the right method for your property.' },
+  { step: '04', title: 'Striping & Cure', desc: 'Once cured, we restripe parking stalls, ADA markings, and traffic lines, then clear the site for use.' },
+];
+
+const faqs = [
+  { q: 'How often should I seal coat my driveway or parking lot?', a: 'Most properties need it every 2 to 3 years, depending on traffic and sun exposure. Sealing on schedule is far cheaper than repaving early.' },
+  { q: 'Does seal coating fix cracks and potholes?', a: 'Seal coating alone won\'t fix structural damage. We fill cracks and repair problem spots first, then seal over a solid surface.' },
+  { q: 'How long before I can drive or park on it?', a: 'Plan on keeping vehicles off for 24 to 48 hours, longer in hot weather. We\'ll give you exact timing for your project.' },
+  { q: 'Can you seal coat and restripe in the same visit?', a: 'Yes. Striping and ADA stall markings are part of every commercial seal coat job once the coating has cured.' },
+  { q: 'What time of year do you seal coat?', a: 'Warm, dry weather works best, typically late spring through early fall in Utah Valley. We can help schedule around your slow season if you\'re a business.' },
+  { q: 'Do you work on both driveways and commercial lots?', a: 'Yes. We handle everything from single driveways to multi-acre commercial and hotel parking lots.' },
+];
+---
+
+<Layout
+  title="Seal Coating Services | J&C Asphalt | Utah Valley"
+  description="Professional seal coating for driveways and commercial parking lots throughout Utah Valley. Crack filling, seal coating, and fresh striping from J&C Asphalt."
+>
+  <section class="service-hero">
+    <div class="container">
+      <span class="section-label">Our Services</span>
+      <h1 class="section-title">Seal Coating &amp; Line Striping</h1>
+      <p>Protect your asphalt and keep your lot looking sharp. From residential driveways to hotel and commercial parking lots, our crew handles crack filling, seal coating, and fresh striping in one visit.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="/work" class="btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-overview section-pad">
+    <div class="container">
+      <div class="overview-inner">
+        <div class="overview-image">
+          <img
+            src="/images/sealcoat-holiday-inn-express.jpg"
+            alt="Freshly seal coated hotel parking lot with new striping and mountain backdrop in Utah Valley"
+            width="580"
+            height="480"
+            loading="lazy"
+          />
+        </div>
+        <div class="overview-content">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-title">Full-Service Seal Coating</h2>
+          <p>Asphalt breaks down fast under Utah's sun, snow, and temperature swings. Seal coating protects the surface from UV damage, water penetration, and oil or gas spills, extending the life of your driveway or parking lot by years. We handle the entire job, from crack repair to the final coat of striping.</p>
+          <ul class="service-list">
+            <li>Crack filling and surface prep</li>
+            <li>Professional seal coat application</li>
+            <li>Fresh line striping and ADA stall markings</li>
+            <li>Residential driveways</li>
+            <li>Commercial and HOA parking lots</li>
+            <li>Hotel, retail, and office properties</li>
+          </ul>
+          <a href="/contact" class="btn-primary" style="margin-top: 1.75rem; display: inline-block;">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Our Seal Coating Process</h2>
+      </div>
+      <div class="process-grid">
+        {process.map(p => (
+          <div class="process-step">
+            <span class="step-number">{p.step}</span>
+            <h3>{p.title}</h3>
+            <p>{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="service-pad section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Recent Work</span>
+        <h2 class="section-title">Seal Coating Projects</h2>
+      </div>
+      <div class="mini-gallery">
+        {[
+          { src: '/images/sealcoat-tru-hotel.jpg', alt: 'Freshly seal coated parking lot at a Tru by Hilton hotel in Utah Valley' },
+          { src: '/images/sealcoat-apartment-complex.jpg', alt: 'Aerial view of a freshly seal coated apartment complex parking lot in Utah Valley' },
+          { src: '/images/sealcoat-restaurant-topdown.jpg', alt: 'Top-down aerial view of a freshly seal coated restaurant parking lot with new striping' },
+        ].map(({ src, alt }) => (
+          <div class="gallery-item">
+            <img
+              src={src}
+              alt={alt}
+              width="560"
+              height="380"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+      <div style="text-align:center; margin-top: 2.5rem;">
+        <a href="/work" class="btn-outline-red">View All Projects &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Seal Coating FAQ</h2>
+      </div>
+      <div class="faq-grid">
+        {faqs.map(item => (
+          <div class="faq-item">
+            <h3>{item.q}</h3>
+            <p>{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="service-cta">
+    <div class="container">
+      <h2>Ready to Protect Your Pavement?</h2>
+      <p>Get a free seal coating estimate and keep your driveway or parking lot looking new for years to come.</p>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn-primary">Get a Free Quote</a>
+        <a href="sms:+13854409882" class="btn-outline">Text (385) 440-9882</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-hero {
+    padding: 8rem 0 5rem;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #cd553f;
+  }
+
+  .service-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0.5rem 0 1rem;
+  }
+
+  .service-hero p {
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .section-pad {
+    padding: 5rem 0;
+  }
+
+  .section-dark {
+    background-color: #F2F5F2;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 3rem;
+  }
+
+  .overview-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .overview-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .overview-content h2 {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .overview-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .service-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .service-list li::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 9l4 4 8-8' stroke='%23cd553f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .process-step {
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    border-top: 3px solid #cd553f;
+  }
+
+  .step-number {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(205, 85, 63, 0.2);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .process-step h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #121212;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .mini-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    padding: 1.75rem;
+    background-color: #FFFFFF;
+    border: 1px solid #C8CEC8;
+    border-left: 3px solid #cd553f;
+  }
+
+  .faq-item h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #121212;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .service-cta {
+    background-color: #cd553f;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .service-cta h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-cta p {
+    color: rgba(0,0,0,0.7);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .service-cta .btn-primary {
+    background-color: #000;
+    color: #cd553f;
+  }
+
+  .service-cta .btn-primary:hover {
+    background-color: #1A1A1A;
+  }
+
+  .service-cta .btn-outline {
+    border-color: #000;
+    color: #000;
+  }
+
+  .service-cta .btn-outline:hover {
+    background-color: #000;
+    color: #cd553f;
+  }
+
+  @media (max-width: 900px) {
+    .overview-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mini-gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .process-grid,
+    .mini-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
