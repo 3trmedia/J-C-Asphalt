@@ -2,21 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 
 const projects = [
+  { title: 'Hotel Parking Lot Seal Coat', location: 'Salt Lake Valley, UT', type: 'Seal Coating', size: '20,000 sq ft', img: '/images/sealcoat-holiday-inn-express.jpg' },
+  { title: 'Private Road Paving', location: 'Genola, UT', type: 'Paving', size: '6,000 sq ft', img: '/images/genola-private-road-aerial.jpg' },
+  { title: 'Church Parking Lot', location: 'Pleasant Grove, UT', type: 'Parking Lot', size: '30,000 sq ft', img: '/images/aerial-paver-top.jpg' },
+  { title: 'Hotel Parking Lot Seal Coat', location: 'Utah Valley, UT', type: 'Seal Coating', size: '22,000 sq ft', img: '/images/sealcoat-tru-hotel.jpg' },
   { title: 'Residential Driveway', location: 'Spanish Fork, UT', type: 'Paving', size: '2,400 sq ft', img: '/images/driveway-aerial-finished.jpg' },
+  { title: 'Apartment Complex Seal Coat', location: 'Utah Valley, UT', type: 'Seal Coating', size: '40,000 sq ft', img: '/images/sealcoat-apartment-complex.jpg' },
+  { title: 'Driveway Overlay', location: 'Lehi, UT', type: 'Paving', size: '2,100 sq ft', img: '/images/paver-leeboy-side.jpg' },
+  { title: 'Restaurant Lot Seal Coat', location: 'Utah Valley, UT', type: 'Seal Coating', size: '15,000 sq ft', img: '/images/sealcoat-restaurant-topdown.jpg' },
   { title: 'Commercial Parking Lot', location: 'Provo, UT', type: 'Parking Lot', size: '18,000 sq ft', img: '/images/crew-asphalt-work.jpg' },
   { title: 'Driveway Installation', location: 'Springville, UT', type: 'Paving', size: '1,800 sq ft', img: '/images/aerial-drone-paving.jpg' },
   { title: 'Land Clearing + Paving', location: 'Payson, UT', type: 'Land Clearing', size: '5,000 sq ft', img: '/images/skidsteer-sunny.jpg' },
-  { title: 'Aggregate Driveway', location: 'Mapleton, UT', type: 'Aggregate', size: '3,200 sq ft', img: '/images/material-delivery.jpg' },
-  { title: 'Private Road Paving', location: 'Genola, UT', type: 'Paving', size: '6,000 sq ft', img: '/images/genola-private-road-aerial.jpg' },
-  { title: 'Concrete Curb & Gutter', location: 'American Fork, UT', type: 'Concrete', size: '600 ln ft', img: '/images/concrete-finished.jpg' },
-  { title: 'Driveway Overlay', location: 'Lehi, UT', type: 'Paving', size: '2,100 sq ft', img: '/images/paver-leeboy-side.jpg' },
-  { title: 'Church Parking Lot', location: 'Pleasant Grove, UT', type: 'Parking Lot', size: '30,000 sq ft', img: '/images/aerial-paver-top.jpg' },
   { title: 'Residential Driveway', location: 'Santaquin, UT', type: 'Paving', size: '1,950 sq ft', img: '/images/driveway-completed-aerial.jpg' },
+  { title: 'Aggregate Driveway', location: 'Mapleton, UT', type: 'Aggregate', size: '3,200 sq ft', img: '/images/material-delivery.jpg' },
+  { title: 'Concrete Curb & Gutter', location: 'American Fork, UT', type: 'Concrete', size: '600 ln ft', img: '/images/concrete-finished.jpg' },
   { title: 'Residential Driveway', location: 'Logan, UT', type: 'Paving', size: '2,500 sq ft', img: '/images/logan-residential-driveway-aerial.jpg' },
-  { title: 'Apartment Complex Seal Coat', location: 'Utah Valley, UT', type: 'Seal Coating', size: '40,000 sq ft', img: '/images/sealcoat-apartment-complex.jpg' },
-  { title: 'Hotel Parking Lot Seal Coat', location: 'Salt Lake Valley, UT', type: 'Seal Coating', size: '20,000 sq ft', img: '/images/sealcoat-holiday-inn-express.jpg' },
-  { title: 'Hotel Parking Lot Seal Coat', location: 'Utah Valley, UT', type: 'Seal Coating', size: '22,000 sq ft', img: '/images/sealcoat-tru-hotel.jpg' },
-  { title: 'Restaurant Lot Seal Coat', location: 'Utah Valley, UT', type: 'Seal Coating', size: '15,000 sq ft', img: '/images/sealcoat-restaurant-topdown.jpg' },
 ];
 
 const filters = ['All', 'Paving', 'Parking Lot', 'Aggregate', 'Concrete', 'Land Clearing', 'Seal Coating'];
