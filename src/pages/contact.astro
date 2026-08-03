@@ -160,6 +160,7 @@ import Layout from '../layouts/Layout.astro';
     const banner = document.getElementById('success-banner');
     if (banner) banner.style.display = 'flex';
     trackEvent('generate_lead', { form_location: window.location.pathname });
+    console.log('generate_lead fired');
     params.delete('success');
     const query = params.toString();
     window.history.replaceState({}, '', window.location.pathname + (query ? `?${query}` : ''));
